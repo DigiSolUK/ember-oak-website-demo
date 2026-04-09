@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ember & Oak | Catering</title>
+  <meta name="description" content="Catering services page with enquiry form for events and corporate orders.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="catering-page">
+  <header class="site-header">
+    <div class="top-strip">
+      <div class="container">
+        <span>Open daily 12:00-22:00</span>
+        <span>Call: +44 20 7946 0520 | 225 Market Street, London EC1</span>
+      </div>
+    </div>
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">EMBER & OAK</a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="menu.html">Menu</a>
+        <a href="banquet.html">Banquet Facility</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="catering.html">Catering</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="visiting-hours.html">Visiting Hours</a>
+        <a href="online-booking.html">Online Booking</a>
+        <a href="menu-kit.html">Menu Kit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">External Service</p>
+        <h1>Catering</h1>
+        <p>Off-site and on-site catering for private functions, office lunches, and large event service.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-2">
+        <article class="card">
+          <h3>Service Options</h3>
+          <ul class="info-list">
+            <li>Wedding and engagement catering</li>
+            <li>Corporate lunch and conference setup</li>
+            <li>Home party grill stations</li>
+            <li>Custom veg/non-veg menu plans</li>
+            <li>Live counter add-ons and dessert bars</li>
+          </ul>
+          <p class="notice">Minimum booking notice: 48 hours. Large events recommended with 7+ days notice.</p>
+        </article>
+
+        <article class="card">
+          <h3>Catering Enquiry Quote</h3>
+          <form data-demo-form id="catering-form">
+            <div class="form-grid">
+              <div>
+                <label for="cat-name">Full Name</label>
+                <input id="cat-name" required>
+              </div>
+              <div>
+                <label for="cat-phone">Phone</label>
+                <input id="cat-phone" required>
+              </div>
+              <div>
+                <label for="cat-email">Email</label>
+                <input id="cat-email" type="email" required>
+              </div>
+              <div>
+                <label for="cat-people">No. of Guests</label>
+                <input id="cat-people" type="number" min="10" required>
+              </div>
+              <div class="full">
+                <label for="cat-msg">Event Details</label>
+                <textarea id="cat-msg" placeholder="Location, date, cuisine preferences, serving style"></textarea>
+              </div>
+            </div>
+            <div class="btn-row" style="margin-top:12px;">
+              <button class="btn btn-primary" type="submit">Send Enquiry</button>
+            </div>
+            <div class="form-feedback" aria-live="polite"></div>
+          </form>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <section>
+        <h3 class="footer-title">Ember & Oak</h3>
+        <p>A modern restaurant website sample covering dining, events, catering, and reservations.</p>
+      </section>
+      <section>
+        <h3 class="footer-title">Quick Links</h3>
+        <ul class="info-list">
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="banquet.html">Banquet Facility</a></li>
+          <li><a href="online-booking.html">Book Online</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3 class="footer-title">Contact</h3>
+        <ul class="info-list">
+          <li>+44 20 7946 0520</li>
+          <li>events@emberandoak.co.uk</li>
+          <li>225 Market Street, London EC1</li>
+        </ul>
+      </section>
+    </div>
+    <div class="container copyright">Copyright <span data-year></span> Ember & Oak. Demo build for local launch.</div>
+  </footer>
+
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

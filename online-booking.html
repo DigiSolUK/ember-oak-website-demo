@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ember & Oak | Online Booking</title>
+  <meta name="description" content="Book restaurant tables online with preferred date, time, and guest count.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="booking-page">
+  <header class="site-header">
+    <div class="top-strip">
+      <div class="container">
+        <span>Open daily 12:00-22:00</span>
+        <span>Call: +44 20 7946 0520 | 225 Market Street, London EC1</span>
+      </div>
+    </div>
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">EMBER & OAK</a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="menu.html">Menu</a>
+        <a href="banquet.html">Banquet Facility</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="catering.html">Catering</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="visiting-hours.html">Visiting Hours</a>
+        <a href="online-booking.html">Online Booking</a>
+        <a href="menu-kit.html">Menu Kit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Reservation Portal</p>
+        <h1>Online Booking</h1>
+        <p>Reserve your table online in a few clicks. This demo can be connected to email, WhatsApp, or a booking plugin.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-2">
+        <article class="card">
+          <h3>Table Reservation Form</h3>
+          <form data-demo-form id="booking-form">
+            <div class="form-grid">
+              <div>
+                <label for="booking-name">Full Name</label>
+                <input id="booking-name" required>
+              </div>
+              <div>
+                <label for="booking-phone">Phone</label>
+                <input id="booking-phone" required>
+              </div>
+              <div>
+                <label for="booking-date">Date</label>
+                <input id="booking-date" type="date" required>
+              </div>
+              <div>
+                <label for="booking-time">Time</label>
+                <select id="booking-time" required>
+                  <option value="">Select time</option>
+                  <option>12:00</option>
+                  <option>13:00</option>
+                  <option>14:00</option>
+                  <option>18:00</option>
+                  <option>19:00</option>
+                  <option>20:00</option>
+                  <option>21:00</option>
+                </select>
+              </div>
+              <div>
+                <label for="booking-guests">Guests</label>
+                <input id="booking-guests" type="number" min="1" max="20" required>
+              </div>
+              <div>
+                <label for="booking-occasion">Occasion</label>
+                <select id="booking-occasion">
+                  <option>Regular Dining</option>
+                  <option>Birthday</option>
+                  <option>Anniversary</option>
+                  <option>Business Dinner</option>
+                </select>
+              </div>
+              <div class="full">
+                <label for="booking-note">Special Requests</label>
+                <textarea id="booking-note" placeholder="Seating, allergies, celebration setup, etc."></textarea>
+              </div>
+            </div>
+            <div class="btn-row" style="margin-top:12px;">
+              <button class="btn btn-primary" type="submit">Submit Booking Enquiry</button>
+            </div>
+            <div class="form-feedback" aria-live="polite"></div>
+          </form>
+        </article>
+
+        <article class="card">
+          <h3>Booking Notes</h3>
+          <ul class="info-list">
+            <li>Table hold time: 15 minutes from reserved slot</li>
+            <li>For groups above 8, call for confirmation</li>
+            <li>Large celebrations may require advance deposit</li>
+            <li>Menu pre-selection available for events</li>
+          </ul>
+          <p class="notice">No online payment or shopping cart is required for this booking flow.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <section>
+        <h3 class="footer-title">Ember & Oak</h3>
+        <p>A modern restaurant website sample covering dining, events, catering, and reservations.</p>
+      </section>
+      <section>
+        <h3 class="footer-title">Quick Links</h3>
+        <ul class="info-list">
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="visiting-hours.html">Visiting Hours</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </section>
+      <section>
+        <h3 class="footer-title">Contact</h3>
+        <ul class="info-list">
+          <li>+44 20 7946 0520</li>
+          <li>events@emberandoak.co.uk</li>
+          <li>225 Market Street, London EC1</li>
+        </ul>
+      </section>
+    </div>
+    <div class="container copyright">Copyright <span data-year></span> Ember & Oak. Demo build for local launch.</div>
+  </footer>
+
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

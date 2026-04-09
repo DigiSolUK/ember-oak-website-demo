@@ -1,0 +1,19 @@
+EMBER & OAK - EVENT MENU (SAMPLE)
+
+Starters
+- Smoked Corn Soup
+- Crispy Calamari
+
+Grill Specials
+- Firewood Chicken Platter
+- Signature Lamb Chops
+
+Main Course
+- Truffle Mushroom Risotto
+- Coastal Seafood Pasta
+
+Desserts
+- Burnt Cheesecake
+- Chocolate Lava Pot
+
+For final production use, replace this sample with your branded menu content.
