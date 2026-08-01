@@ -3,111 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ember & Oak | Gallery</title>
-  <meta name="description" content="Restaurant gallery page showing ambience, food, and events.">
+  <title>Indigo Ops | Sage Sync</title>
+  <meta name="description" content="Sage integration status demo for Indigo Electricals CRM.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body class="gallery-page">
-  <header class="site-header">
-    <div class="top-strip">
-      <div class="container">
-        <span>Open daily 12:00-22:00</span>
-        <span>Call: +44 20 7946 0520 | 225 Market Street, London EC1</span>
-      </div>
-    </div>
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html">EMBER & OAK</a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
-      <nav class="site-nav" id="site-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="menu.html">Menu</a>
-        <a href="banquet.html">Banquet Facility</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="catering.html">Catering</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="visiting-hours.html">Visiting Hours</a>
-        <a href="online-booking.html">Online Booking</a>
-        <a href="menu-kit.html">Menu Kit</a>
-      </nav>
-    </div>
-  </header>
-
+<body>
+  <header class="site-header"><div class="top-strip"><div class="container"><span>Indigo Electricals CRM Demo</span><span>Sage-connected reconciliation for commission-short payments</span></div></div><div class="container nav-wrap"><a class="brand" href="index.html">INDIGO OPS<small>Electrical CRM + Sage</small></a><button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button><nav class="site-nav" id="site-nav"><a href="index.html">Dashboard</a><a href="about.html">Solution</a><a href="menu.html">Jobs</a><a href="banquet.html">Invoices</a><a href="gallery.html">Sage Sync</a><a href="catering.html">Commission</a><a href="contact.html">Settings</a><a href="visiting-hours.html">Payment Monitor</a><a href="online-booking.html">New Job</a><a href="menu-kit.html">Proposal</a></nav><span class="sync-badge">Sage demo sync</span></div></header>
   <main>
-    <section class="page-hero">
-      <div class="container">
-        <p class="eyebrow">Visual Journal</p>
-        <h1>Gallery</h1>
-        <p>Replace these placeholders with your real restaurant photos, event shots, and signature dishes.</p>
-      </div>
+    <section class="container page-head"><div><p class="eyebrow">Sage sync</p><h1>Controlled posting queue before anything touches Sage.</h1><p class="lead">The production version would use Sage OAuth and keep a complete audit trail for reads, writes, failures, and manual approvals.</p></div><div class="toolbar"><button class="btn btn-primary" type="button" data-demo-action>Run Demo Sync</button></div></section>
+    <section class="container grid-4">
+      <article class="metric good"><div class="metric-value">Online</div><div class="metric-label">OAuth connection</div></article>
+      <article class="metric"><div class="metric-value">42</div><div class="metric-label">Invoices checked today</div></article>
+      <article class="metric warn"><div class="metric-value">5</div><div class="metric-label">Awaiting approval</div></article>
+      <article class="metric bad"><div class="metric-value">1</div><div class="metric-label">Sync exception</div></article>
     </section>
-
-    <section class="section">
-      <div class="container gallery-grid">
-        <figure class="gallery-photo tall">
-          <img src="assets/images/gallery-01.jpg" alt="Signature plated course under warm evening lighting" width="1600" height="1200" loading="lazy">
-          <figcaption>Signature plated service</figcaption>
-        </figure>
-        <figure class="gallery-photo">
-          <img src="assets/images/gallery-02.jpg" alt="Cocktails and plated small bites at the lounge bar" width="1600" height="1200" loading="lazy">
-          <figcaption>Lounge bar pairings</figcaption>
-        </figure>
-        <figure class="gallery-photo">
-          <img src="assets/images/gallery-03.jpg" alt="Interior dining floor with modern table arrangement" width="1600" height="1067" loading="lazy">
-          <figcaption>Modern dining floor</figcaption>
-        </figure>
-        <figure class="gallery-photo tall">
-          <img src="assets/images/gallery-04.jpg" alt="Chef-crafted dish from seasonal tasting sequence" width="1600" height="1067" loading="lazy">
-          <figcaption>Seasonal tasting sequence</figcaption>
-        </figure>
-        <figure class="gallery-photo">
-          <img src="assets/images/gallery-05.jpg" alt="Private table setting prepared for a celebration" width="1600" height="1067" loading="lazy">
-          <figcaption>Private celebration table</figcaption>
-        </figure>
-        <figure class="gallery-photo tall">
-          <img src="assets/images/gallery-06.jpg" alt="Dessert and coffee pairing in the evening service" width="1600" height="1067" loading="lazy">
-          <figcaption>Dessert and coffee close</figcaption>
-        </figure>
-        <figure class="gallery-photo">
-          <img src="assets/images/gallery-07.jpg" alt="Guests sharing a toast during an event dinner" width="1600" height="1067" loading="lazy">
-          <figcaption>Event dinner toast</figcaption>
-        </figure>
-        <figure class="gallery-photo">
-          <img src="assets/images/gallery-08.jpg" alt="Ambient restaurant corner with soft lighting and seating" width="1600" height="1067" loading="lazy">
-          <figcaption>Ambient evening corner</figcaption>
-        </figure>
-      </div>
+    <section class="container grid-2" style="margin-top:16px;">
+      <article class="panel"><h2>Objects To Sync</h2><ul class="audit-list"><li>Sales invoices and invoice references</li><li>Contacts and client accounts</li><li>Bank receipts and payment allocations</li><li>Commission adjustment entries or credit-note workflow</li></ul></article>
+      <article class="panel"><h2>Latest Sync Log</h2><ul class="audit-list"><li>09:42 INV-1047 receipt matched and allocated.</li><li>09:39 INV-1048 commission adjustment prepared for approval.</li><li>09:31 INV-1046 held because deduction rate was outside tolerance.</li><li>09:20 Sage contact cache refreshed.</li></ul></article>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <section>
-        <h3 class="footer-title">Ember & Oak</h3>
-        <p>A modern restaurant website sample covering dining, events, catering, and reservations.</p>
-      </section>
-      <section>
-        <h3 class="footer-title">Quick Links</h3>
-        <ul class="info-list">
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="banquet.html">Banquet Facility</a></li>
-          <li><a href="online-booking.html">Book Online</a></li>
-        </ul>
-      </section>
-      <section>
-        <h3 class="footer-title">Contact</h3>
-        <ul class="info-list">
-          <li>+44 20 7946 0520</li>
-          <li>events@emberandoak.co.uk</li>
-          <li>225 Market Street, London EC1</li>
-        </ul>
-      </section>
-    </div>
-    <div class="container copyright">Copyright <span data-year></span> Ember & Oak. Demo build for local launch.</div>
-  </footer>
-
+  <footer class="site-footer"><div class="container footer-grid"><span>Indigo Ops CRM prototype</span><span>Sage sync view for safe accounting automation.</span><span>&copy; <span data-year></span> Digitalised Solutions</span></div></footer>
   <script src="assets/js/site.js"></script>
 </body>
 </html>

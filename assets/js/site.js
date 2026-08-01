@@ -11,7 +11,7 @@
 
     nav.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
-        if (window.innerWidth <= 1024) {
+        if (window.innerWidth <= 980) {
           toggle.setAttribute("aria-expanded", "false");
           nav.classList.remove("open");
         }
@@ -21,8 +21,7 @@
 
   const currentPath = location.pathname.split("/").pop() || "index.html";
   document.querySelectorAll(".site-nav a").forEach((a) => {
-    const href = a.getAttribute("href");
-    if (href === currentPath || (currentPath === "" && href === "index.html")) {
+    if (a.getAttribute("href") === currentPath) {
       a.classList.add("active");
     }
   });
@@ -32,88 +31,61 @@
     yearTarget.textContent = String(new Date().getFullYear());
   }
 
-  const bookingDate = document.querySelector("#booking-date");
-  if (bookingDate) {
-    const today = new Date();
-    bookingDate.min = today.toISOString().split("T")[0];
-  }
+  const formatGBP = (value) =>
+    new Intl.NumberFormat("en-GB", {
+      style: "currency",
+      currency: "GBP",
+      maximumFractionDigits: 0,
+    }).format(Number.isFinite(value) ? value : 0);
+
+  const invoiceTotal = document.querySelector("#invoice-total");
+  const netPaid = document.querySelector("#net-paid");
+  const commissionRate = document.querySelector("#commission-rate");
+  const calcNet = document.querySelector("#calc-net");
+  const calcCommission = document.querySelector("#calc-commission");
+  const calcUnallocated = document.querySelector("#calc-unallocated");
+  const calcSage = document.querySelector("#calc-sage");
+
+  const updateCalculator = () => {
+    if (!invoiceTotal || !netPaid || !commissionRate) {
+      return;
+    }
+
+    const gross = Number(invoiceTotal.value) || 0;
+    const paid = Number(netPaid.value) || 0;
+    const rate = Number(commissionRate.value) || 0;
+    const commission = gross * (rate / 100);
+    const expectedNet = gross - commission;
+    const difference = paid - expectedNet;
+
+    calcNet.textContent = formatGBP(expectedNet);
+    calcCommission.textContent = formatGBP(commission);
+    calcUnallocated.textContent = formatGBP(difference);
+    calcSage.textContent = Math.abs(difference) <= 1 ? "Invoice can be settled" : "Manual review needed";
+  };
+
+  [invoiceTotal, netPaid, commissionRate].forEach((input) => {
+    if (input) {
+      input.addEventListener("input", updateCalculator);
+    }
+  });
+  updateCalculator();
 
   document.querySelectorAll("[data-demo-form]").forEach((form) => {
     form.addEventListener("submit", (event) => {
       event.preventDefault();
-
       const feedback = form.querySelector(".form-feedback");
-      if (!feedback) {
-        return;
-      }
-
-      if (form.id === "booking-form") {
-        const dateInput = form.querySelector("#booking-date");
-        if (dateInput && dateInput.value) {
-          const picked = new Date(`${dateInput.value}T00:00:00`);
-          const today = new Date();
-          today.setHours(0, 0, 0, 0);
-          if (picked < today) {
-            feedback.className = "form-feedback error";
-            feedback.textContent = "Booking date cannot be in the past.";
-            return;
-          }
-        }
-      }
-
-      feedback.className = "form-feedback success";
-      feedback.textContent = "Thank you. This is a demo form; connect it to email or WhatsApp for production enquiries.";
-      form.reset();
-
-      if (form.id === "booking-form" && bookingDate) {
-        const today = new Date();
-        bookingDate.min = today.toISOString().split("T")[0];
+      if (feedback) {
+        feedback.className = "form-feedback success";
+        feedback.textContent = "Saved in demo mode. Production would write this to the CRM and audit log.";
       }
     });
   });
 
-  const filterButtons = document.querySelectorAll("[data-filter]");
-  const menuItems = document.querySelectorAll(".menu-item[data-category]");
-
-  if (filterButtons.length && menuItems.length) {
-    filterButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        const category = button.dataset.filter;
-        filterButtons.forEach((btn) => btn.classList.remove("active"));
-        button.classList.add("active");
-
-        menuItems.forEach((item) => {
-          const matches = category === "all" || item.dataset.category === category;
-          item.style.display = matches ? "flex" : "none";
-        });
-      });
+  document.querySelectorAll("[data-demo-action]").forEach((button) => {
+    button.addEventListener("click", () => {
+      button.textContent = "Demo sync queued";
+      button.classList.add("btn-success");
     });
-  }
-
-  const revealTargets = document.querySelectorAll(
-    ".panel-content, .card, .menu-item, .photo-card, .hero-card, .statement-card, .section-title, .section-lead"
-  );
-
-  revealTargets.forEach((node) => node.classList.add("reveal"));
-
-  if ("IntersectionObserver" in window) {
-    const observer = new IntersectionObserver(
-      (entries, obs) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            obs.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.16,
-        rootMargin: "0px 0px -28px 0px",
-      }
-    );
-
-    revealTargets.forEach((target) => observer.observe(target));
-  } else {
-    revealTargets.forEach((target) => target.classList.add("is-visible"));
-  }
+  });
 })();

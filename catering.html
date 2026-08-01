@@ -3,122 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ember & Oak | Catering</title>
-  <meta name="description" content="Catering services page with enquiry form for events and corporate orders.">
+  <title>Indigo Ops | Commission Rules</title>
+  <meta name="description" content="Commission rule configuration demo for client deductions.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body class="catering-page">
-  <header class="site-header">
-    <div class="top-strip">
-      <div class="container">
-        <span>Open daily 12:00-22:00</span>
-        <span>Call: +44 20 7946 0520 | 225 Market Street, London EC1</span>
-      </div>
-    </div>
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html">EMBER & OAK</a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
-      <nav class="site-nav" id="site-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="menu.html">Menu</a>
-        <a href="banquet.html">Banquet Facility</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="catering.html">Catering</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="visiting-hours.html">Visiting Hours</a>
-        <a href="online-booking.html">Online Booking</a>
-        <a href="menu-kit.html">Menu Kit</a>
-      </nav>
-    </div>
-  </header>
-
+<body>
+  <header class="site-header"><div class="top-strip"><div class="container"><span>Indigo Electricals CRM Demo</span><span>Sage-connected reconciliation for commission-short payments</span></div></div><div class="container nav-wrap"><a class="brand" href="index.html">INDIGO OPS<small>Electrical CRM + Sage</small></a><button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button><nav class="site-nav" id="site-nav"><a href="index.html">Dashboard</a><a href="about.html">Solution</a><a href="menu.html">Jobs</a><a href="banquet.html">Invoices</a><a href="gallery.html">Sage Sync</a><a href="catering.html">Commission</a><a href="contact.html">Settings</a><a href="visiting-hours.html">Payment Monitor</a><a href="online-booking.html">New Job</a><a href="menu-kit.html">Proposal</a></nav><span class="sync-badge">Sage demo sync</span></div></header>
   <main>
-    <section class="page-hero">
-      <div class="container">
-        <p class="eyebrow">External Service</p>
-        <h1>Catering</h1>
-        <p>Off-site and on-site catering for private functions, office lunches, and large event service.</p>
-      </div>
+    <section class="container page-head"><div><p class="eyebrow">Commission rules</p><h1>Define what each client is allowed to deduct.</h1><p class="lead">Matching becomes reliable when every client has a default commission rate, tolerance, posting account, and approval threshold.</p></div></section>
+    <section class="container panel">
+      <div class="table-wrap"><table><thead><tr><th>Client</th><th>Rule</th><th>Tolerance</th><th>Sage Account</th><th>Approval</th><th>Status</th></tr></thead><tbody>
+        <tr><td>Letting Partner A</td><td>10%</td><td>£5</td><td>Commission Paid</td><td>Auto under £250</td><td><span class="status ok">Active</span></td></tr>
+        <tr><td>Property Group North</td><td>10%</td><td>£10</td><td>Commission Paid</td><td>Auto under £150</td><td><span class="status ok">Active</span></td></tr>
+        <tr><td>Insurance Network</td><td>12.5%</td><td>£0</td><td>Clearing Account</td><td>Always manual</td><td><span class="status warn">Strict</span></td></tr>
+        <tr><td>Facilities Contractor</td><td>10%</td><td>£5</td><td>Commission Paid</td><td>Auto under £200</td><td><span class="status ok">Active</span></td></tr>
+      </tbody></table></div>
     </section>
-
-    <section class="section">
-      <div class="container grid-2">
-        <article class="card">
-          <h3>Service Options</h3>
-          <ul class="info-list">
-            <li>Wedding and engagement catering</li>
-            <li>Corporate lunch and conference setup</li>
-            <li>Home party grill stations</li>
-            <li>Custom veg/non-veg menu plans</li>
-            <li>Live counter add-ons and dessert bars</li>
-          </ul>
-          <p class="notice">Minimum booking notice: 48 hours. Large events recommended with 7+ days notice.</p>
-        </article>
-
-        <article class="card">
-          <h3>Catering Enquiry Quote</h3>
-          <form data-demo-form id="catering-form">
-            <div class="form-grid">
-              <div>
-                <label for="cat-name">Full Name</label>
-                <input id="cat-name" required>
-              </div>
-              <div>
-                <label for="cat-phone">Phone</label>
-                <input id="cat-phone" required>
-              </div>
-              <div>
-                <label for="cat-email">Email</label>
-                <input id="cat-email" type="email" required>
-              </div>
-              <div>
-                <label for="cat-people">No. of Guests</label>
-                <input id="cat-people" type="number" min="10" required>
-              </div>
-              <div class="full">
-                <label for="cat-msg">Event Details</label>
-                <textarea id="cat-msg" placeholder="Location, date, cuisine preferences, serving style"></textarea>
-              </div>
-            </div>
-            <div class="btn-row" style="margin-top:12px;">
-              <button class="btn btn-primary" type="submit">Send Enquiry</button>
-            </div>
-            <div class="form-feedback" aria-live="polite"></div>
-          </form>
-        </article>
-      </div>
+    <section class="container panel" style="margin-top:16px;">
+      <h2>Add Commission Rule</h2>
+      <form data-demo-form>
+        <div class="form-grid">
+          <div><label for="rule-client">Client</label><input id="rule-client" required></div>
+          <div><label for="rule-rate">Commission rate</label><input id="rule-rate" placeholder="10%" required></div>
+          <div><label for="rule-account">Sage account</label><input id="rule-account" placeholder="Commission Paid" required></div>
+          <div><label for="rule-approval">Approval threshold</label><input id="rule-approval" placeholder="£250"></div>
+        </div>
+        <p class="form-feedback" aria-live="polite"></p>
+        <button class="btn btn-primary" type="submit">Save Demo Rule</button>
+      </form>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <section>
-        <h3 class="footer-title">Ember & Oak</h3>
-        <p>A modern restaurant website sample covering dining, events, catering, and reservations.</p>
-      </section>
-      <section>
-        <h3 class="footer-title">Quick Links</h3>
-        <ul class="info-list">
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="banquet.html">Banquet Facility</a></li>
-          <li><a href="online-booking.html">Book Online</a></li>
-        </ul>
-      </section>
-      <section>
-        <h3 class="footer-title">Contact</h3>
-        <ul class="info-list">
-          <li>+44 20 7946 0520</li>
-          <li>events@emberandoak.co.uk</li>
-          <li>225 Market Street, London EC1</li>
-        </ul>
-      </section>
-    </div>
-    <div class="container copyright">Copyright <span data-year></span> Ember & Oak. Demo build for local launch.</div>
-  </footer>
-
+  <footer class="site-footer"><div class="container footer-grid"><span>Indigo Ops CRM prototype</span><span>Commission rules convert messy receipts into repeatable accounting actions.</span><span>&copy; <span data-year></span> Digitalised Solutions</span></div></footer>
   <script src="assets/js/site.js"></script>
 </body>
 </html>

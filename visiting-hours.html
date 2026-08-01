@@ -3,102 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ember & Oak | Visiting Hours</title>
-  <meta name="description" content="Restaurant opening hours and visit guidance.">
+  <title>Indigo Ops | Payment Monitor</title>
+  <meta name="description" content="Payment detection and matching queue for Indigo Electricals.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body class="hours-page">
-  <header class="site-header">
-    <div class="top-strip">
-      <div class="container">
-        <span>Open daily 12:00-22:00</span>
-        <span>Call: +44 20 7946 0520 | 225 Market Street, London EC1</span>
-      </div>
-    </div>
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html">EMBER & OAK</a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
-      <nav class="site-nav" id="site-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="menu.html">Menu</a>
-        <a href="banquet.html">Banquet Facility</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="catering.html">Catering</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="visiting-hours.html">Visiting Hours</a>
-        <a href="online-booking.html">Online Booking</a>
-        <a href="menu-kit.html">Menu Kit</a>
-      </nav>
-    </div>
-  </header>
-
+<body>
+  <header class="site-header"><div class="top-strip"><div class="container"><span>Indigo Electricals CRM Demo</span><span>Sage-connected reconciliation for commission-short payments</span></div></div><div class="container nav-wrap"><a class="brand" href="index.html">INDIGO OPS<small>Electrical CRM + Sage</small></a><button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button><nav class="site-nav" id="site-nav"><a href="index.html">Dashboard</a><a href="about.html">Solution</a><a href="menu.html">Jobs</a><a href="banquet.html">Invoices</a><a href="gallery.html">Sage Sync</a><a href="catering.html">Commission</a><a href="contact.html">Settings</a><a href="visiting-hours.html">Payment Monitor</a><a href="online-booking.html">New Job</a><a href="menu-kit.html">Proposal</a></nav><span class="sync-badge">Sage demo sync</span></div></header>
   <main>
-    <section class="page-hero">
-      <div class="container">
-        <p class="eyebrow">Service Schedule</p>
-        <h1>Visiting Hours</h1>
-        <p>Plan your visit with weekly service times and peak-hour recommendations.</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container grid-2">
-        <article class="card">
-          <h3>Weekly Schedule</h3>
-          <ul class="info-list">
-            <li>Monday: 12:00-22:00</li>
-            <li>Tuesday: 12:00-22:00</li>
-            <li>Wednesday: 12:00-22:00</li>
-            <li>Thursday: 12:00-22:00</li>
-            <li>Friday: 12:00-23:00</li>
-            <li>Saturday: 12:00-23:30</li>
-            <li>Sunday: 12:00-22:30</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h3>Visit Tips</h3>
-          <ul class="info-list">
-            <li>Peak dinner hours: 19:00-21:30</li>
-            <li>Book in advance for weekends and holidays</li>
-            <li>Banquet consultations by appointment</li>
-            <li>Parking available nearby</li>
-          </ul>
-          <p class="notice">For groups of 8+, use the Online Booking page or call directly for priority seating.</p>
-        </article>
-      </div>
+    <section class="container page-head"><div><p class="eyebrow">Payment monitor</p><h1>Detect payments that are short by the exact commission amount.</h1><p class="lead">The matcher compares bank receipts with Sage invoices and client commission rules before recommending a posting action.</p></div><div class="toolbar"><button class="btn btn-primary" type="button" data-demo-action>Import Bank Feed</button></div></section>
+    <section class="container panel">
+      <h2>Incoming Receipts</h2>
+      <div class="table-wrap"><table><thead><tr><th>Bank Ref</th><th>Received</th><th>Matched Invoice</th><th>Expected Gross</th><th>Detected Deduction</th><th>Confidence</th><th>Action</th></tr></thead><tbody>
+        <tr><td>BANK-8831</td><td>£1,080</td><td>INV-1048</td><td>£1,200</td><td>£120</td><td>98%</td><td><span class="status warn">Approve adjustment</span></td></tr>
+        <tr><td>BANK-8826</td><td>£774</td><td>INV-1047</td><td>£860</td><td>£86</td><td>99%</td><td><span class="status ok">Auto-ready</span></td></tr>
+        <tr><td>BANK-8820</td><td>£2,100</td><td>INV-1046</td><td>£2,400</td><td>£300</td><td>71%</td><td><span class="status bad">Manual check</span></td></tr>
+      </tbody></table></div>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <section>
-        <h3 class="footer-title">Ember & Oak</h3>
-        <p>A modern restaurant website sample covering dining, events, catering, and reservations.</p>
-      </section>
-      <section>
-        <h3 class="footer-title">Quick Links</h3>
-        <ul class="info-list">
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="online-booking.html">Book Online</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-      </section>
-      <section>
-        <h3 class="footer-title">Contact</h3>
-        <ul class="info-list">
-          <li>+44 20 7946 0520</li>
-          <li>events@emberandoak.co.uk</li>
-          <li>225 Market Street, London EC1</li>
-        </ul>
-      </section>
-    </div>
-    <div class="container copyright">Copyright <span data-year></span> Ember & Oak. Demo build for local launch.</div>
-  </footer>
-
+  <footer class="site-footer"><div class="container footer-grid"><span>Indigo Ops CRM prototype</span><span>Payment monitoring for commission-deducted receipts.</span><span>&copy; <span data-year></span> Digitalised Solutions</span></div></footer>
   <script src="assets/js/site.js"></script>
 </body>
 </html>

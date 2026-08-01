@@ -3,160 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ember & Oak | Menu</title>
-  <meta name="description" content="Restaurant menu sample with category filters and featured dishes.">
+  <title>Indigo Ops | Jobs CRM</title>
+  <meta name="description" content="Electrical jobs CRM demo for Indigo Electricals.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body class="menu-page">
-  <header class="site-header">
-    <div class="top-strip">
-      <div class="container">
-        <span>Open daily 12:00-22:00</span>
-        <span>Call: +44 20 7946 0520 | 225 Market Street, London EC1</span>
-      </div>
-    </div>
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html">EMBER & OAK</a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
-      <nav class="site-nav" id="site-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="menu.html">Menu</a>
-        <a href="banquet.html">Banquet Facility</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="catering.html">Catering</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="visiting-hours.html">Visiting Hours</a>
-        <a href="online-booking.html">Online Booking</a>
-        <a href="menu-kit.html">Menu Kit</a>
-      </nav>
-    </div>
-  </header>
-
+<body>
+  <header class="site-header"><div class="top-strip"><div class="container"><span>Indigo Electricals CRM Demo</span><span>Sage-connected reconciliation for commission-short payments</span></div></div><div class="container nav-wrap"><a class="brand" href="index.html">INDIGO OPS<small>Electrical CRM + Sage</small></a><button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button><nav class="site-nav" id="site-nav"><a href="index.html">Dashboard</a><a href="about.html">Solution</a><a href="menu.html">Jobs</a><a href="banquet.html">Invoices</a><a href="gallery.html">Sage Sync</a><a href="catering.html">Commission</a><a href="contact.html">Settings</a><a href="visiting-hours.html">Payment Monitor</a><a href="online-booking.html">New Job</a><a href="menu-kit.html">Proposal</a></nav><span class="sync-badge">Sage demo sync</span></div></header>
   <main>
-    <section class="page-hero">
-      <div class="container">
-        <p class="eyebrow">Current Selection</p>
-        <h1>Menu</h1>
-        <p>Sample menu with interactive category filtering. Replace dish names and prices with your real offerings anytime.</p>
-      </div>
+    <section class="container page-head"><div><p class="eyebrow">Jobs CRM</p><h1>Track electrical jobs from enquiry to invoice settlement.</h1><p class="lead">A central view for job type, engineer allocation, client, site, invoice reference, and payment outcome.</p></div><div class="toolbar"><a class="btn btn-primary" href="online-booking.html">Add Job</a></div></section>
+    <section class="container grid-3">
+      <article class="metric"><div class="metric-value">34</div><div class="metric-label">Open jobs</div></article>
+      <article class="metric good"><div class="metric-value">18</div><div class="metric-label">Ready to invoice</div></article>
+      <article class="metric warn"><div class="metric-value">7</div><div class="metric-label">Missing client references</div></article>
     </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="menu-toolbar">
-          <button class="filter-btn active" data-filter="all" type="button">All</button>
-          <button class="filter-btn" data-filter="starters" type="button">Starters</button>
-          <button class="filter-btn" data-filter="grill" type="button">Grill</button>
-          <button class="filter-btn" data-filter="mains" type="button">Mains</button>
-          <button class="filter-btn" data-filter="dessert" type="button">Dessert</button>
-          <button class="filter-btn" data-filter="drinks" type="button">Drinks</button>
-        </div>
-
-        <div class="menu-items">
-          <article class="menu-item" data-category="starters">
-            <div>
-              <h4>Smoked Corn Soup</h4>
-              <p class="meta">Roasted sweet corn, herb oil, pepper crumble</p>
-            </div>
-            <div class="price">£9</div>
-          </article>
-          <article class="menu-item" data-category="starters">
-            <div>
-              <h4>Crispy Calamari</h4>
-              <p class="meta">Lemon aioli, pickled shallots</p>
-            </div>
-            <div class="price">£13</div>
-          </article>
-          <article class="menu-item" data-category="grill">
-            <div>
-              <h4>Firewood Chicken Platter</h4>
-              <p class="meta">Half chicken, peri glaze, charred vegetables</p>
-            </div>
-            <div class="price">£22</div>
-          </article>
-          <article class="menu-item" data-category="grill">
-            <div>
-              <h4>Signature Lamb Chops</h4>
-              <p class="meta">Mint butter, smoked potato mash</p>
-            </div>
-            <div class="price">£29</div>
-          </article>
-          <article class="menu-item" data-category="mains">
-            <div>
-              <h4>Truffle Mushroom Risotto</h4>
-              <p class="meta">Arborio rice, parmesan, truffle aroma</p>
-            </div>
-            <div class="price">£19</div>
-          </article>
-          <article class="menu-item" data-category="mains">
-            <div>
-              <h4>Coastal Seafood Pasta</h4>
-              <p class="meta">Shrimp, calamari, spicy tomato sauce</p>
-            </div>
-            <div class="price">£24</div>
-          </article>
-          <article class="menu-item" data-category="dessert">
-            <div>
-              <h4>Burnt Cheesecake</h4>
-              <p class="meta">Berry compote and almond crunch</p>
-            </div>
-            <div class="price">£11</div>
-          </article>
-          <article class="menu-item" data-category="dessert">
-            <div>
-              <h4>Chocolate Lava Pot</h4>
-              <p class="meta">Vanilla bean ice cream</p>
-            </div>
-            <div class="price">£12</div>
-          </article>
-          <article class="menu-item" data-category="drinks">
-            <div>
-              <h4>Smoked Citrus Cooler</h4>
-              <p class="meta">Orange, basil, soda, aromatic smoke</p>
-            </div>
-            <div class="price">£8</div>
-          </article>
-          <article class="menu-item" data-category="drinks">
-            <div>
-              <h4>Cold Brew Tonic</h4>
-              <p class="meta">Single origin brew, tonic water, lemon</p>
-            </div>
-            <div class="price">£7</div>
-          </article>
-        </div>
-      </div>
+    <section class="container panel" style="margin-top:16px;">
+      <h2>Job Register</h2>
+      <div class="table-wrap"><table><thead><tr><th>Job</th><th>Site</th><th>Client</th><th>Engineer</th><th>Value</th><th>Invoice</th><th>Status</th></tr></thead><tbody>
+        <tr><td>JOB-2208</td><td>Flat 12, Harrow</td><td>Letting Partner A</td><td>R. Mason</td><td>£1,200</td><td>INV-1048</td><td><span class="status warn">Payment short</span></td></tr>
+        <tr><td>JOB-2207</td><td>Retail Unit, Watford</td><td>Facilities Contractor</td><td>S. Patel</td><td>£690</td><td>INV-1045</td><td><span class="status ok">Settled</span></td></tr>
+        <tr><td>JOB-2206</td><td>Office Block, Uxbridge</td><td>Property Group North</td><td>A. Reed</td><td>£860</td><td>INV-1047</td><td><span class="status ok">Matched</span></td></tr>
+        <tr><td>JOB-2205</td><td>Emergency call-out</td><td>Insurance Network</td><td>L. Brooks</td><td>£2,400</td><td>INV-1046</td><td><span class="status bad">Exception</span></td></tr>
+      </tbody></table></div>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <section>
-        <h3 class="footer-title">Ember & Oak</h3>
-        <p>A modern restaurant website sample covering dining, events, catering, and reservations.</p>
-      </section>
-      <section>
-        <h3 class="footer-title">Quick Links</h3>
-        <ul class="info-list">
-          <li><a href="menu-kit.html">Download Menu Kit</a></li>
-          <li><a href="online-booking.html">Book Online</a></li>
-          <li><a href="catering.html">Catering Enquiry</a></li>
-        </ul>
-      </section>
-      <section>
-        <h3 class="footer-title">Contact</h3>
-        <ul class="info-list">
-          <li>+44 20 7946 0520</li>
-          <li>events@emberandoak.co.uk</li>
-          <li>225 Market Street, London EC1</li>
-        </ul>
-      </section>
-    </div>
-    <div class="container copyright">Copyright <span data-year></span> Ember & Oak. Demo build for local launch.</div>
-  </footer>
-
+  <footer class="site-footer"><div class="container footer-grid"><span>Indigo Ops CRM prototype</span><span>Jobs, invoices, payments, and Sage status in one place.</span><span>&copy; <span data-year></span> Digitalised Solutions</span></div></footer>
   <script src="assets/js/site.js"></script>
 </body>
 </html>

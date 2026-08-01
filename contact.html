@@ -3,116 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ember & Oak | Contact Us</title>
-  <meta name="description" content="Contact Ember & Oak for reservations, events, and customer support.">
+  <title>Indigo Ops | Integration Settings</title>
+  <meta name="description" content="Integration settings demo for Indigo Electricals CRM and Sage.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body class="contact-page">
-  <header class="site-header">
-    <div class="top-strip">
-      <div class="container">
-        <span>Open daily 12:00-22:00</span>
-        <span>Call: +44 20 7946 0520 | 225 Market Street, London EC1</span>
-      </div>
-    </div>
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html">EMBER & OAK</a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
-      <nav class="site-nav" id="site-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="menu.html">Menu</a>
-        <a href="banquet.html">Banquet Facility</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="catering.html">Catering</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="visiting-hours.html">Visiting Hours</a>
-        <a href="online-booking.html">Online Booking</a>
-        <a href="menu-kit.html">Menu Kit</a>
-      </nav>
-    </div>
-  </header>
-
+<body>
+  <header class="site-header"><div class="top-strip"><div class="container"><span>Indigo Electricals CRM Demo</span><span>Sage-connected reconciliation for commission-short payments</span></div></div><div class="container nav-wrap"><a class="brand" href="index.html">INDIGO OPS<small>Electrical CRM + Sage</small></a><button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button><nav class="site-nav" id="site-nav"><a href="index.html">Dashboard</a><a href="about.html">Solution</a><a href="menu.html">Jobs</a><a href="banquet.html">Invoices</a><a href="gallery.html">Sage Sync</a><a href="catering.html">Commission</a><a href="contact.html">Settings</a><a href="visiting-hours.html">Payment Monitor</a><a href="online-booking.html">New Job</a><a href="menu-kit.html">Proposal</a></nav><span class="sync-badge">Sage demo sync</span></div></header>
   <main>
-    <section class="page-hero">
-      <div class="container">
-        <p class="eyebrow">Contact Desk</p>
-        <h1>Contact Us</h1>
-        <p>Reach us for reservations, event bookings, collaborations, and support.</p>
-      </div>
+    <section class="container page-head"><div><p class="eyebrow">Settings</p><h1>Connect Sage, bank data, notifications, and approval controls.</h1><p class="lead">This page shows the production settings Indigo would need before the automation is allowed to post anything.</p></div></section>
+    <section class="container grid-2">
+      <article class="panel"><h2>Sage Connection</h2><ul class="audit-list"><li>Company: Indigo Electricals Ltd</li><li>Connection: OAuth authorised</li><li>Environment: Demo sandbox</li><li>Write mode: Approval required</li></ul></article>
+      <article class="panel"><h2>Notification Rules</h2><ul class="audit-list"><li>Exceptions sent to accounts@indigoelectricals.co.uk</li><li>Daily unmatched-payment digest at 08:30</li><li>Manual approval required for deductions over £250</li><li>Audit export retained for six years</li></ul></article>
     </section>
-
-    <section class="section">
-      <div class="container grid-2">
-        <article class="card">
-          <h3>Contact Information</h3>
-          <ul class="info-list">
-            <li>Phone: +44 20 7946 0520</li>
-            <li>Email: events@emberandoak.co.uk</li>
-            <li>Address: 225 Market Street, London EC1</li>
-            <li>WhatsApp: +44 20 7946 0520</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h3>Send Us A Message</h3>
-          <form data-demo-form id="contact-form">
-            <div class="form-grid">
-              <div>
-                <label for="contact-name">Name</label>
-                <input id="contact-name" required>
-              </div>
-              <div>
-                <label for="contact-email">Email</label>
-                <input id="contact-email" type="email" required>
-              </div>
-              <div class="full">
-                <label for="contact-subject">Subject</label>
-                <input id="contact-subject" required>
-              </div>
-              <div class="full">
-                <label for="contact-message">Message</label>
-                <textarea id="contact-message" required></textarea>
-              </div>
-            </div>
-            <div class="btn-row" style="margin-top:12px;">
-              <button class="btn btn-primary" type="submit">Send Message</button>
-            </div>
-            <div class="form-feedback" aria-live="polite"></div>
-          </form>
-        </article>
-      </div>
+    <section class="container panel" style="margin-top:16px;">
+      <h2>Update Integration Contact</h2>
+      <form data-demo-form>
+        <div class="form-grid">
+          <div><label for="settings-name">Accounts contact</label><input id="settings-name" value="Accounts Team" required></div>
+          <div><label for="settings-email">Email</label><input id="settings-email" type="email" value="accounts@indigoelectricals.co.uk" required></div>
+          <div><label for="settings-phone">Phone</label><input id="settings-phone" value="+44 20 0000 0000"></div>
+          <div><label for="settings-mode">Posting mode</label><select id="settings-mode"><option>Approval required</option><option>Auto-post safe matches</option><option>Read-only monitoring</option></select></div>
+        </div>
+        <p class="form-feedback" aria-live="polite"></p>
+        <button class="btn btn-primary" type="submit">Save Demo Settings</button>
+      </form>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <section>
-        <h3 class="footer-title">Ember & Oak</h3>
-        <p>A modern restaurant website sample covering dining, events, catering, and reservations.</p>
-      </section>
-      <section>
-        <h3 class="footer-title">Quick Links</h3>
-        <ul class="info-list">
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="online-booking.html">Book Online</a></li>
-          <li><a href="catering.html">Catering Enquiry</a></li>
-        </ul>
-      </section>
-      <section>
-        <h3 class="footer-title">Contact</h3>
-        <ul class="info-list">
-          <li>+44 20 7946 0520</li>
-          <li>events@emberandoak.co.uk</li>
-          <li>225 Market Street, London EC1</li>
-        </ul>
-      </section>
-    </div>
-    <div class="container copyright">Copyright <span data-year></span> Ember & Oak. Demo build for local launch.</div>
-  </footer>
-
+  <footer class="site-footer"><div class="container footer-grid"><span>Indigo Ops CRM prototype</span><span>Settings demo for Sage and payment monitoring controls.</span><span>&copy; <span data-year></span> Digitalised Solutions</span></div></footer>
   <script src="assets/js/site.js"></script>
 </body>
 </html>

@@ -3,167 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ember & Oak | Banquet Facility</title>
-  <meta name="description" content="Banquet hall facility for weddings, birthdays, and corporate events.">
+  <title>Indigo Ops | Invoice Register</title>
+  <meta name="description" content="Invoice register for commission-short payment reconciliation.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body class="banquet-page">
-  <header class="site-header">
-    <div class="top-strip">
-      <div class="container">
-        <span>Open daily 12:00-22:00</span>
-        <span>Call: +44 20 7946 0520 | 225 Market Street, London EC1</span>
-      </div>
-    </div>
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html">EMBER & OAK</a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
-      <nav class="site-nav" id="site-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="menu.html">Menu</a>
-        <a href="banquet.html">Banquet Facility</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="catering.html">Catering</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="visiting-hours.html">Visiting Hours</a>
-        <a href="online-booking.html">Online Booking</a>
-        <a href="menu-kit.html">Menu Kit</a>
-      </nav>
-    </div>
-  </header>
-
+<body>
+  <header class="site-header"><div class="top-strip"><div class="container"><span>Indigo Electricals CRM Demo</span><span>Sage-connected reconciliation for commission-short payments</span></div></div><div class="container nav-wrap"><a class="brand" href="index.html">INDIGO OPS<small>Electrical CRM + Sage</small></a><button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button><nav class="site-nav" id="site-nav"><a href="index.html">Dashboard</a><a href="about.html">Solution</a><a href="menu.html">Jobs</a><a href="banquet.html">Invoices</a><a href="gallery.html">Sage Sync</a><a href="catering.html">Commission</a><a href="contact.html">Settings</a><a href="visiting-hours.html">Payment Monitor</a><a href="online-booking.html">New Job</a><a href="menu-kit.html">Proposal</a></nav><span class="sync-badge">Sage demo sync</span></div></header>
   <main>
-    <section class="page-hero">
-      <div class="container">
-        <p class="eyebrow">Private Event Experiences</p>
-        <h1>Banquet Facility</h1>
-        <p>A flexible venue architecture for weddings, cultural ceremonies, private dining, and executive celebrations with premium service choreography.</p>
-      </div>
+    <section class="container page-head"><div><p class="eyebrow">Invoice register</p><h1>Gross invoice, net receipt, commission, Sage balance.</h1><p class="lead">Every invoice shows exactly why Sage thinks money is still outstanding and what adjustment is required.</p></div></section>
+    <section class="container panel">
+      <div class="table-wrap"><table><thead><tr><th>Invoice</th><th>Date</th><th>Client</th><th>Gross</th><th>Net Paid</th><th>Commission</th><th>Open Balance</th><th>Status</th></tr></thead><tbody>
+        <tr><td>INV-1048</td><td>01 Aug 2026</td><td>Letting Partner A</td><td>£1,200</td><td>£1,080</td><td>£120</td><td>£120</td><td><span class="status warn">Adjustment required</span></td></tr>
+        <tr><td>INV-1047</td><td>31 Jul 2026</td><td>Property Group North</td><td>£860</td><td>£774</td><td>£86</td><td>£0</td><td><span class="status ok">Settled</span></td></tr>
+        <tr><td>INV-1046</td><td>30 Jul 2026</td><td>Insurance Network</td><td>£2,400</td><td>£2,100</td><td>£300</td><td>£0</td><td><span class="status bad">Check rate</span></td></tr>
+        <tr><td>INV-1044</td><td>28 Jul 2026</td><td>Facilities Contractor</td><td>£1,150</td><td>£1,035</td><td>£115</td><td>£0</td><td><span class="status ok">Posted</span></td></tr>
+      </tbody></table></div>
     </section>
-
-    <section class="section">
-      <div class="container">
-        <article class="statement-card">
-          <p class="eyebrow">Event Philosophy</p>
-          <h2 class="section-title">Each function follows a curated experience arc.</h2>
-          <p class="section-lead">Welcome ritual, signature culinary moment, and a coordinated close. The format is designed to feel like a private production, not a routine banquet slot.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section banquet-showcase">
-      <div class="container banquet-media-grid">
-        <figure class="banquet-media-card">
-          <img src="assets/images/banquet-hall.jpg" alt="Banquet hall with elegant table settings and ambient lighting" width="1800" height="1350" loading="lazy">
-          <figcaption>Main hall setup designed for premium receptions and corporate dinners.</figcaption>
-        </figure>
-        <figure class="banquet-media-card">
-          <img src="assets/images/banquet-toast.jpg" alt="Guests toasting at a private celebration event" width="1800" height="1200" loading="lazy">
-          <figcaption>Service choreography that supports speeches, toasts, and seamless hosting.</figcaption>
-        </figure>
-        <figure class="banquet-media-card">
-          <img src="assets/images/banquet-dessert.jpg" alt="Artfully plated desserts served at a private event" width="1800" height="1350" loading="lazy">
-          <figcaption>Chef-finished courses and dessert moments curated for memorable closings.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container grid-3">
-        <article class="card">
-          <h3>Signature Soiree</h3>
-          <p>Up to 80 guests with entry styling, buffet architecture, and dedicated floor captain.</p>
-          <p class="kpi">From £1,500</p>
-        </article>
-        <article class="card">
-          <h3>Grand House Experience</h3>
-          <p>Up to 150 guests with custom decor narrative, stage lighting, and premium tasting progression.</p>
-          <p class="kpi">From £3,200</p>
-        </article>
-        <article class="card">
-          <h3>Executive Supper Edition</h3>
-          <p>Private corporate format with AV support, networking-friendly service, and precision timelines.</p>
-          <p class="kpi">From £1,900</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container grid-2">
-        <article class="card">
-          <h3>Venue Features</h3>
-          <ul class="info-list">
-            <li>Capacity: 30 to 200 guests</li>
-            <li>Indoor + rooftop event sections</li>
-            <li>In-house decor and lighting team</li>
-            <li>Valet and security support on request</li>
-            <li>Custom veg/non-veg buffet plans</li>
-          </ul>
-        </article>
-        <article class="card">
-          <h3>Event Enquiry</h3>
-          <form data-demo-form id="banquet-form">
-            <div class="form-grid">
-              <div>
-                <label for="banquet-name">Full Name</label>
-                <input id="banquet-name" name="name" required>
-              </div>
-              <div>
-                <label for="banquet-phone">Phone</label>
-                <input id="banquet-phone" name="phone" required>
-              </div>
-              <div>
-                <label for="banquet-guests">Estimated Guests</label>
-                <input id="banquet-guests" type="number" min="10" placeholder="e.g. 120" required>
-              </div>
-              <div>
-                <label for="banquet-date">Event Date</label>
-                <input id="banquet-date" type="date" required>
-              </div>
-              <div class="full">
-                <label for="banquet-msg">Event Notes</label>
-                <textarea id="banquet-msg" placeholder="Wedding reception, birthday, etc."></textarea>
-              </div>
-            </div>
-            <div class="btn-row" style="margin-top:12px;">
-              <button class="btn btn-primary" type="submit">Submit Enquiry</button>
-            </div>
-            <div class="form-feedback" aria-live="polite"></div>
-          </form>
-        </article>
-      </div>
+    <section class="container grid-3" style="margin-top:16px;">
+      <article class="callout"><h3>Invoice integrity</h3><p>Keep the sales invoice at the full value so revenue and VAT reporting remain transparent.</p></article>
+      <article class="callout"><h3>Payment integrity</h3><p>Record the real bank receipt, not a manually inflated amount.</p></article>
+      <article class="callout"><h3>Commission visibility</h3><p>Post the shortfall to a controlled commission account, credit workflow, or clearing process.</p></article>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <section>
-        <h3 class="footer-title">Ember & Oak</h3>
-        <p>A modern restaurant website sample covering dining, events, catering, and reservations.</p>
-      </section>
-      <section>
-        <h3 class="footer-title">Quick Links</h3>
-        <ul class="info-list">
-          <li><a href="online-booking.html">Book Online</a></li>
-          <li><a href="contact.html">Contact Team</a></li>
-          <li><a href="menu-kit.html">Menu Kit</a></li>
-        </ul>
-      </section>
-      <section>
-        <h3 class="footer-title">Contact</h3>
-        <ul class="info-list">
-          <li>+44 20 7946 0520</li>
-          <li>events@emberandoak.co.uk</li>
-          <li>225 Market Street, London EC1</li>
-        </ul>
-      </section>
-    </div>
-    <div class="container copyright">Copyright <span data-year></span> Ember & Oak. Demo build for local launch.</div>
-  </footer>
-
+  <footer class="site-footer"><div class="container footer-grid"><span>Indigo Ops CRM prototype</span><span>Invoice register with commission-aware reconciliation.</span><span>&copy; <span data-year></span> Digitalised Solutions</span></div></footer>
   <script src="assets/js/site.js"></script>
 </body>
 </html>
