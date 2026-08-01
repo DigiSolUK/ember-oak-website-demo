@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Indigo Ops | Website + CRM Backend Demo</title>
+  <meta name="description" content="Indigo Ops demo for a replacement website with CRM backend, Sage reconciliation and commission-short payment handling.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="crm-product-page">
+  <a class="skip-link" href="#crm-content">Skip to CRM content</a>
+
+  <header class="site-header crm-header">
+    <div class="top-strip">
+      <div class="container">
+        <span>Indigo Ops CRM Backend Demo</span>
+        <span>Sage-connected payment matching for commission-short invoices</span>
+      </div>
+    </div>
+    <div class="container nav-wrap">
+      <a class="brand brand-logo" href="index.html" aria-label="Indigo Electrical landing page">
+        <img src="assets/images/indigo/logo.png" alt="Indigo Electrical logo" width="179" height="150">
+        <span>Website + operations platform</span>
+      </a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="site-nav" id="site-nav" aria-label="CRM navigation">
+        <a href="index.html">Landing Page</a>
+        <a href="crm.html">CRM Dashboard</a>
+        <a href="about.html">Solution</a>
+        <a href="menu.html">Jobs</a>
+        <a href="banquet.html">Invoices</a>
+        <a href="gallery.html">Sage Sync</a>
+        <a href="catering.html">Commission</a>
+        <a href="menu-kit.html">Proposal</a>
+      </nav>
+      <span class="sync-badge">Sage demo sync</span>
+    </div>
+  </header>
+
+  <main id="crm-content" class="crm-app-shell">
+    <aside class="crm-rail" aria-label="CRM modules">
+      <div class="rail-brand">
+        <img src="assets/images/indigo/logo.png" alt="" width="179" height="150">
+        <div>
+          <strong>Indigo Ops</strong>
+          <span>Private CRM backend</span>
+        </div>
+      </div>
+      <nav class="rail-nav">
+        <a class="active" href="#overview">Overview</a>
+        <a href="#payments">Payment Matching</a>
+        <a href="#calculator">Resolver</a>
+        <a href="#jobs">Job Pipeline</a>
+        <a href="#audit">Audit Trail</a>
+      </nav>
+      <div class="rail-status">
+        <span class="status-dot"></span>
+        <div>
+          <strong>Sage sandbox online</strong>
+          <span>Last sync: 09:42 today</span>
+        </div>
+      </div>
+    </aside>
+
+    <section class="crm-content-area">
+      <section class="crm-command" id="overview">
+        <div>
+          <p class="eyebrow">Operations command centre</p>
+          <h1>Replacement website on the front, CRM backend behind it.</h1>
+          <p class="lead">The public website captures enquiries. The private backend tracks jobs, invoices, bank receipts and the commission deductions that are causing Sage reconciliation problems.</p>
+        </div>
+        <div class="command-actions">
+          <button class="btn btn-primary" type="button" data-demo-action data-demo-label="Bank feed imported">Import Bank Feed</button>
+            <a class="btn btn-secondary" href="index.html">View Website Demo</a>
+        </div>
+      </section>
+
+      <section class="crm-kpi-grid" aria-label="Key CRM metrics">
+        <article class="crm-kpi-card good"><span>Matched Receipts</span><strong>£48,260</strong><small>+18% from last month</small></article>
+        <article class="crm-kpi-card warn"><span>Commission Deductions</span><strong>£3,840</strong><small>Awaiting Sage posting</small></article>
+        <article class="crm-kpi-card bad"><span>Payment Exceptions</span><strong>12</strong><small>Need accounts approval</small></article>
+        <article class="crm-kpi-card info"><span>Auto-match Confidence</span><strong>97%</strong><small>Invoice ref + rule match</small></article>
+      </section>
+
+      <section class="crm-workspace">
+        <article class="crm-panel payment-panel" id="payments">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Payment matching</p>
+              <h2>Exception queue</h2>
+            </div>
+            <span class="queue-count">12 open</span>
+          </div>
+          <div class="table-wrap">
+            <table class="crm-table">
+              <thead>
+                <tr><th>Receipt</th><th>Invoice</th><th>Client</th><th>Gross</th><th>Paid</th><th>Deduction</th><th>Confidence</th><th>Action</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>BANK-8831</td><td>INV-1048</td><td>Letting Partner A</td><td>£1,200</td><td>£1,080</td><td>£120</td><td><span class="risk-pill ok">98%</span></td><td><button class="btn btn-secondary" type="button" data-demo-action data-demo-label="Approved">Approve</button></td></tr>
+                <tr><td>BANK-8826</td><td>INV-1047</td><td>Property Group North</td><td>£860</td><td>£774</td><td>£86</td><td><span class="risk-pill ok">99%</span></td><td><button class="btn btn-secondary" type="button" data-demo-action data-demo-label="Posted">Post</button></td></tr>
+                <tr><td>BANK-8820</td><td>INV-1046</td><td>Insurance Network</td><td>£2,400</td><td>£2,100</td><td>£300</td><td><span class="risk-pill warn">71%</span></td><td><button class="btn btn-secondary" type="button" data-demo-action data-demo-label="Flagged">Flag</button></td></tr>
+                <tr><td>BANK-8818</td><td>INV-1044</td><td>Facilities Contractor</td><td>£1,150</td><td>£1,035</td><td>£115</td><td><span class="risk-pill ok">96%</span></td><td><button class="btn btn-secondary" type="button" data-demo-action data-demo-label="Approved">Approve</button></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <aside class="crm-side-stack">
+          <article class="crm-panel health-card">
+            <div class="panel-heading">
+              <h2>Sage sync health</h2>
+              <span class="risk-pill ok">Online</span>
+            </div>
+            <div class="health-stack">
+              <div><span>OAuth connection</span><strong>Authorised</strong></div>
+              <div><span>Invoice read</span><strong>42 checked</strong></div>
+              <div><span>Write mode</span><strong>Approval required</strong></div>
+              <div><span>Failed writes</span><strong>0 today</strong></div>
+            </div>
+          </article>
+
+          <article class="crm-panel rule-card">
+            <h2>Approval controls</h2>
+            <ul class="approval-list">
+              <li><strong>Auto-post</strong><span>Under £150 and 95%+ confidence</span></li>
+              <li><strong>Manager approval</strong><span>£150-£250 commission deductions</span></li>
+              <li><strong>Accountant check</strong><span>Rate mismatch or VAT/account uncertainty</span></li>
+            </ul>
+          </article>
+        </aside>
+      </section>
+
+      <section class="crm-lower-grid">
+        <article class="crm-panel resolver-panel" id="calculator">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Commission resolver</p>
+              <h2>Work out the Sage adjustment</h2>
+            </div>
+            <span class="risk-pill info">Live demo</span>
+          </div>
+          <div class="resolver-grid">
+            <form class="reconcile-box">
+              <label for="invoice-total">Gross invoice value</label>
+              <input id="invoice-total" type="number" value="1200" min="0" step="1">
+              <label for="net-paid">Bank receipt received</label>
+              <input id="net-paid" type="number" value="1080" min="0" step="1">
+              <label for="commission-rate">Commission rate (%)</label>
+              <input id="commission-rate" type="number" value="10" min="0" step="0.1">
+            </form>
+            <div class="resolver-output">
+              <div class="calc-row"><span>Expected net receipt</span><strong id="calc-net">£1,080</strong></div>
+              <div class="calc-row"><span>Commission adjustment</span><strong id="calc-commission">£120</strong></div>
+              <div class="calc-row"><span>Unallocated difference</span><strong id="calc-unallocated">£0</strong></div>
+              <div class="calc-row total"><span>Sage result</span><strong id="calc-sage">Invoice can be settled</strong></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="crm-panel posting-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">Posting workflow</p>
+              <h2>Controlled Sage write-back</h2>
+            </div>
+          </div>
+          <div class="posting-flow">
+            <div><span>1</span><strong>Read invoice</strong><small>Gross invoice and contact pulled from Sage.</small></div>
+            <div><span>2</span><strong>Match receipt</strong><small>Bank reference, client and value checked.</small></div>
+            <div><span>3</span><strong>Apply rule</strong><small>Commission rate and tolerance calculated.</small></div>
+            <div><span>4</span><strong>Prepare adjustment</strong><small>Commission cost/clearing route queued.</small></div>
+            <div><span>5</span><strong>Post audit</strong><small>Receipt, adjustment and approval log retained.</small></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="crm-panel pipeline-panel" id="jobs">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Job CRM</p>
+            <h2>Electrical job pipeline</h2>
+          </div>
+          <a class="btn btn-secondary" href="online-booking.html">Create Job</a>
+        </div>
+        <div class="crm-pipeline">
+          <section class="pipeline-column"><h3>New enquiry</h3><article class="job-card"><strong>Fuseboard upgrade</strong><span>Harrow, £1,150 estimate</span></article><article class="job-card"><strong>EICR landlord pack</strong><span>Romford, 5 properties</span></article></section>
+          <section class="pipeline-column"><h3>Scheduled</h3><article class="job-card"><strong>Emergency lighting</strong><span>Watford retail unit</span></article><article class="job-card"><strong>EV charger survey</strong><span>Essex workplace</span></article></section>
+          <section class="pipeline-column"><h3>Ready to invoice</h3><article class="job-card"><strong>Storage heater repair</strong><span>INV draft ready</span></article><article class="job-card"><strong>Socket relocation</strong><span>Photos attached</span></article></section>
+          <section class="pipeline-column"><h3>Payment exception</h3><article class="job-card urgent"><strong>INV-1048 short paid</strong><span>£120 commission gap</span></article><article class="job-card urgent"><strong>INV-1046 check rate</strong><span>Manual approval required</span></article></section>
+        </div>
+      </section>
+
+      <section class="crm-audit-grid" id="audit">
+        <article class="crm-panel">
+          <h2>Audit trail</h2>
+          <ul class="audit-list">
+            <li>09:42 BANK-8826 matched to INV-1047 and queued for Sage allocation.</li>
+            <li>09:39 INV-1048 commission adjustment prepared for manager approval.</li>
+            <li>09:31 INV-1046 held because deduction rate was outside tolerance.</li>
+            <li>09:20 Sage contact and invoice cache refreshed successfully.</li>
+          </ul>
+        </article>
+        <article class="crm-panel">
+          <h2>Month-end value</h2>
+          <div class="bar-list">
+            <div><span>Manual reconciliation avoided</span><strong>14 hrs</strong><i style="--bar: 82%"></i></div>
+            <div><span>Invoices cleared first pass</span><strong>87%</strong><i style="--bar: 87%"></i></div>
+            <div><span>Commission cost captured</span><strong>£3,840</strong><i style="--bar: 68%"></i></div>
+          </div>
+        </article>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <span>Indigo Ops website + CRM backend demo</span>
+      <span>Static prototype. Production build needs login, database, Sage OAuth and agreed posting rules.</span>
+      <span>&copy; <span data-year></span> Digitalised Solutions</span>
+    </div>
+  </footer>
+  <script src="assets/js/site.js"></script>
+</body>
+</html>

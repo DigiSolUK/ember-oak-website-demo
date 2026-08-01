@@ -84,8 +84,9 @@
 
   document.querySelectorAll("[data-demo-action]").forEach((button) => {
     button.addEventListener("click", () => {
-      button.textContent = "Demo sync queued";
+      button.textContent = button.dataset.demoLabel || "Demo sync queued";
       button.classList.add("btn-success");
+      button.setAttribute("aria-live", "polite");
     });
   });
 })();
