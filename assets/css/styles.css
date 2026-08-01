@@ -1945,8 +1945,8 @@ textarea:focus-visible {
 
 .blog-index-page .blog-hero h1 {
   max-width: 960px;
-  font-size: clamp(2.5rem, 5.8vw, 5.45rem);
-  line-height: 0.94;
+  font-size: clamp(2.15rem, 4.7vw, 4.25rem);
+  line-height: 0.98;
 }
 
 .blog-hero-actions,
@@ -1985,8 +1985,8 @@ textarea:focus-visible {
 .blog-hero-card strong {
   display: block;
   max-width: 310px;
-  font-size: clamp(1.45rem, 2.5vw, 2rem);
-  line-height: 1;
+  font-size: clamp(1.22rem, 2vw, 1.55rem);
+  line-height: 1.08;
   letter-spacing: -0.045em;
 }
 
@@ -2014,7 +2014,8 @@ textarea:focus-visible {
 
 .blog-index-section .directory-heading h2 {
   max-width: 850px;
-  font-size: clamp(2.15rem, 4.8vw, 4.25rem);
+  font-size: clamp(1.8rem, 3.5vw, 3.1rem);
+  line-height: 1;
 }
 
 .blog-index-section .directory-heading > p {
@@ -2170,7 +2171,7 @@ textarea:focus-visible {
 
 .blog-index-page .blog-card:first-child h2 {
   max-width: 620px;
-  font-size: clamp(1.45rem, 2.6vw, 2.15rem);
+  font-size: clamp(1.22rem, 2vw, 1.65rem);
 }
 
 .blog-empty-state {
@@ -3282,8 +3283,9 @@ textarea:focus-visible {
   }
 
   .blog-index-page .blog-hero h1 {
-    font-size: clamp(2.05rem, 11vw, 3rem);
-    letter-spacing: -0.05em;
+    font-size: clamp(1.72rem, 8.8vw, 2.35rem);
+    line-height: 1.02;
+    letter-spacing: -0.045em;
   }
 
   .blog-hero-actions .btn,
@@ -3316,7 +3318,7 @@ textarea:focus-visible {
   }
 
   .blog-index-page .blog-card:first-child h2 {
-    font-size: clamp(1.2rem, 7vw, 1.7rem);
+    font-size: clamp(1.12rem, 5.8vw, 1.42rem);
   }
 
   .blog-card-meta {
