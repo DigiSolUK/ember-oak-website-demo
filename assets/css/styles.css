@@ -2095,7 +2095,7 @@ textarea:focus-visible {
   }
 
   .brand-logo img {
-    width: 58px;
+    width: 76px;
   }
 
   .brand-logo span {
@@ -2124,7 +2124,7 @@ textarea:focus-visible {
   .premium-header .nav-wrap {
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 7px;
-    padding: 6px 0;
+    padding: 5px 0;
     align-items: center;
   }
 
@@ -2303,7 +2303,7 @@ textarea:focus-visible {
   }
 
   .premium-header .brand-logo img {
-    width: 56px;
+    width: 72px;
   }
 
   .premium-header .menu-toggle,
