@@ -1316,6 +1316,34 @@ textarea:focus-visible {
   min-height: 48px;
 }
 
+.contact-strip {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 22px;
+  align-items: center;
+  margin-bottom: 46px;
+  border: 1px solid rgba(49, 35, 143, 0.12);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(180, 96, 181, 0.16), transparent 46%),
+    #fff;
+  box-shadow: var(--shadow);
+  padding: clamp(22px, 4vw, 34px);
+}
+
+.contact-strip h2 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
 .premium-footer a {
   color: var(--indigo);
   font-weight: 800;
@@ -1927,7 +1955,8 @@ textarea:focus-visible {
   .crm-workspace,
   .crm-lower-grid,
   .crm-audit-grid,
-  .resolver-grid {
+  .resolver-grid,
+  .contact-strip {
     grid-template-columns: 1fr;
   }
 
@@ -1944,6 +1973,10 @@ textarea:focus-visible {
   }
 
   .command-actions {
+    justify-content: flex-start;
+  }
+
+  .contact-actions {
     justify-content: flex-start;
   }
 }
@@ -2089,5 +2122,9 @@ textarea:focus-visible {
 
   .posting-flow div {
     grid-template-columns: 1fr;
+  }
+
+  .contact-actions .btn {
+    width: 100%;
   }
 }
