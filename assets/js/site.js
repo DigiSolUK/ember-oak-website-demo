@@ -75,6 +75,33 @@
     form.addEventListener("submit", (event) => {
       event.preventDefault();
       const feedback = form.querySelector(".form-feedback");
+
+      if (form.matches("[data-whatsapp-form]")) {
+        const phone = form.dataset.whatsappPhone || "447766307028";
+        const name = form.querySelector("#quote-name")?.value.trim() || "Not provided";
+        const customerPhone = form.querySelector("#quote-phone")?.value.trim() || "Not provided";
+        const email = form.querySelector("#quote-email")?.value.trim() || "Not provided";
+        const service = form.querySelector("#quote-service")?.value || "Not selected";
+        const details = form.querySelector("#quote-message")?.value.trim() || "Not provided";
+        const message = [
+          "New Indigo Electrical enquiry",
+          "",
+          `Name: ${name}`,
+          `Phone: ${customerPhone}`,
+          `Email: ${email}`,
+          `Service: ${service}`,
+          `Details: ${details}`,
+        ].join("\n");
+
+        if (feedback) {
+          feedback.className = "form-feedback success";
+          feedback.textContent = "Opening WhatsApp with your enquiry details.";
+        }
+
+        window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, "_blank", "noopener");
+        return;
+      }
+
       if (feedback) {
         feedback.className = "form-feedback success";
         feedback.textContent = "Saved in demo mode. Production would write this to the CRM and audit log.";
