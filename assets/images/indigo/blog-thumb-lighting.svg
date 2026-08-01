@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
+  <title id="title">Indigo Electrical Lighting Guide</title>
+  <desc id="desc">Branded illustration for Indigo Electrical lighting advice.</desc>
+  <defs>
+    <linearGradient id="g" x1="120" x2="680" y1="70" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#b460b5"/>
+      <stop offset="1" stop-color="#f7bf4f"/>
+    </linearGradient>
+    <radialGradient id="r" cx="0" cy="0" r="1" gradientTransform="matrix(260 0 0 260 650 92)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="520" rx="46" fill="url(#g)"/>
+  <rect width="800" height="520" rx="46" fill="url(#r)"/>
+  <path d="M80 420c118-76 230-94 336-54s204 39 304-4" fill="none" stroke="#fff" stroke-width="26" stroke-linecap="round" opacity=".15"/>
+  <path d="M118 118h120M118 162h78" stroke="#fff" stroke-width="16" stroke-linecap="round" opacity=".45"/>
+  <path d="M394 126c-70 0-126 54-126 122 0 42 20 78 52 101 22 16 28 30 28 54h92c0-24 6-38 28-54 32-23 52-59 52-101 0-68-56-122-126-122Z" fill="#fff"/><path d="M348 404h92m-82 42h72" stroke="#31238f" stroke-width="18" stroke-linecap="round"/><path d="M394 76v-42m-156 94-30-30m342 30 30-30M202 248h-46m476 0h-46" stroke="#fff" stroke-width="18" stroke-linecap="round" opacity=".7"/><path d="M350 270c24 18 64 18 88 0" stroke="#b460b5" stroke-width="16" stroke-linecap="round"/>
+  <text x="56" y="454" fill="#fff" font-family="IBM Plex Sans, Arial, sans-serif" font-size="40" font-weight="700" letter-spacing="-1.8">Lighting</text>
+</svg>

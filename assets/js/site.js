@@ -38,6 +38,55 @@
     yearTarget.textContent = String(new Date().getFullYear());
   }
 
+  const blogSearch = document.querySelector("[data-blog-search]");
+  const blogCards = Array.from(document.querySelectorAll("[data-blog-card]"));
+  const blogTopicButtons = Array.from(document.querySelectorAll("[data-blog-topic]"));
+  const blogCount = document.querySelector("[data-blog-count]");
+  const blogEmpty = document.querySelector("[data-blog-empty]");
+
+  if (blogCards.length && (blogSearch || blogTopicButtons.length)) {
+    let activeTopic = "all";
+
+    const updateBlogCards = () => {
+      const query = (blogSearch?.value || "").trim().toLowerCase();
+      let visibleCount = 0;
+
+      blogCards.forEach((card) => {
+        const matchesTopic = activeTopic === "all" || card.dataset.topic === activeTopic;
+        const matchesSearch = !query || (card.dataset.search || "").includes(query);
+        const shouldShow = matchesTopic && matchesSearch;
+
+        card.hidden = !shouldShow;
+        if (shouldShow) {
+          visibleCount += 1;
+        }
+      });
+
+      if (blogCount) {
+        blogCount.textContent = `Showing ${visibleCount} ${visibleCount === 1 ? "guide" : "guides"}`;
+      }
+
+      if (blogEmpty) {
+        blogEmpty.hidden = visibleCount !== 0;
+      }
+    };
+
+    blogTopicButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        activeTopic = button.dataset.blogTopic || "all";
+        blogTopicButtons.forEach((topicButton) => {
+          const isActive = topicButton === button;
+          topicButton.classList.toggle("active", isActive);
+          topicButton.setAttribute("aria-pressed", String(isActive));
+        });
+        updateBlogCards();
+      });
+    });
+
+    blogSearch?.addEventListener("input", updateBlogCards);
+    updateBlogCards();
+  }
+
   const formatGBP = (value) =>
     new Intl.NumberFormat("en-GB", {
       style: "currency",

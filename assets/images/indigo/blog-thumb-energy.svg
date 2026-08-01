@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
+  <title id="title">Indigo Electrical Energy Guide</title>
+  <desc id="desc">Branded illustration for Indigo Electrical energy advice.</desc>
+  <defs>
+    <linearGradient id="g" x1="120" x2="680" y1="70" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0f8f63"/>
+      <stop offset="1" stop-color="#18b6d9"/>
+    </linearGradient>
+    <radialGradient id="r" cx="0" cy="0" r="1" gradientTransform="matrix(260 0 0 260 650 92)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="520" rx="46" fill="url(#g)"/>
+  <rect width="800" height="520" rx="46" fill="url(#r)"/>
+  <path d="M80 420c118-76 230-94 336-54s204 39 304-4" fill="none" stroke="#fff" stroke-width="26" stroke-linecap="round" opacity=".15"/>
+  <path d="M118 118h120M118 162h78" stroke="#fff" stroke-width="16" stroke-linecap="round" opacity=".45"/>
+  <path d="M420 108 292 316h116l-42 126 150-210H402l18-124Z" fill="#fff"/><path d="M420 108 292 316h116l-42 126 150-210H402l18-124Z" fill="none" stroke="#31238f" stroke-width="16" stroke-linejoin="round"/><path d="M214 406c78-42 146-42 224 0s146 42 224 0" fill="none" stroke="#18b6d9" stroke-width="18" stroke-linecap="round"/><path d="M198 178c48-34 102-51 162-51" fill="none" stroke="#fff" stroke-width="16" stroke-linecap="round" opacity=".62"/>
+  <text x="56" y="454" fill="#fff" font-family="IBM Plex Sans, Arial, sans-serif" font-size="40" font-weight="700" letter-spacing="-1.8">Energy</text>
+</svg>

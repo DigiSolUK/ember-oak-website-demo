@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="520" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
+  <title id="title">Indigo Electrical Heating Guide</title>
+  <desc id="desc">Branded illustration for Indigo Electrical heating advice.</desc>
+  <defs>
+    <linearGradient id="g" x1="120" x2="680" y1="70" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#b86b00"/>
+      <stop offset="1" stop-color="#b460b5"/>
+    </linearGradient>
+    <radialGradient id="r" cx="0" cy="0" r="1" gradientTransform="matrix(260 0 0 260 650 92)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff" stop-opacity=".42"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="520" rx="46" fill="url(#g)"/>
+  <rect width="800" height="520" rx="46" fill="url(#r)"/>
+  <path d="M80 420c118-76 230-94 336-54s204 39 304-4" fill="none" stroke="#fff" stroke-width="26" stroke-linecap="round" opacity=".15"/>
+  <path d="M118 118h120M118 162h78" stroke="#fff" stroke-width="16" stroke-linecap="round" opacity=".45"/>
+  <rect x="244" y="146" width="300" height="266" rx="34" fill="#fff" opacity=".92"/><path d="M302 198v160m62-160v160m62-160v160m62-160v160" stroke="#31238f" stroke-width="16" stroke-linecap="round"/><path d="M274 232h240M274 324h240" stroke="#b460b5" stroke-width="14" stroke-linecap="round" opacity=".8"/><path d="M236 438c38-28 72-28 110 0s72 28 110 0 72-28 110 0" fill="none" stroke="#fff" stroke-width="16" stroke-linecap="round" opacity=".64"/>
+  <text x="56" y="454" fill="#fff" font-family="IBM Plex Sans, Arial, sans-serif" font-size="40" font-weight="700" letter-spacing="-1.8">Heating</text>
+</svg>
