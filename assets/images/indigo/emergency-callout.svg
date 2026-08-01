@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">Emergency electrical call-out illustration</title>
+  <desc id="desc">A mobile phone, alert marker and electrical bolt on an indigo background.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#1b165f"/>
+      <stop offset="0.55" stop-color="#31238f"/>
+      <stop offset="1" stop-color="#b460b5"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="620" rx="48" fill="url(#g)"/>
+  <circle cx="720" cy="120" r="180" fill="#18b6d9" opacity=".22"/>
+  <circle cx="160" cy="520" r="210" fill="#b460b5" opacity=".22"/>
+  <rect x="282" y="92" width="260" height="430" rx="38" fill="#fff" opacity=".94"/>
+  <rect x="315" y="146" width="194" height="284" rx="22" fill="#edf0ff"/>
+  <circle cx="412" cy="468" r="18" fill="#31238f"/>
+  <path d="M455 185 365 334h82l-28 116 112-174h-86z" fill="#b460b5"/>
+  <circle cx="600" cy="215" r="82" fill="#fff"/>
+  <path d="M600 166v58" stroke="#b42318" stroke-width="22" stroke-linecap="round"/>
+  <circle cx="600" cy="263" r="12" fill="#b42318"/>
+  <path d="M210 176h-84M236 250h-64M684 410h88M640 470h128" stroke="#fff" stroke-width="18" stroke-linecap="round" opacity=".72"/>
+</svg>

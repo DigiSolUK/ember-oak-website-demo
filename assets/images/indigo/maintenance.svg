@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">Electrical maintenance illustration</title>
+  <desc id="desc">A maintenance checklist with electrical tools and status cards.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#10233f"/>
+      <stop offset=".56" stop-color="#31238f"/>
+      <stop offset="1" stop-color="#b460b5"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="620" rx="48" fill="url(#g)"/>
+  <rect x="210" y="92" width="396" height="456" rx="34" fill="#fff" opacity=".95"/>
+  <rect x="268" y="146" width="280" height="34" rx="17" fill="#edf0ff"/>
+  <g stroke="#31238f" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m276 248 28 28 58-72"/>
+    <path d="m276 356 28 28 58-72"/>
+    <path d="m276 464 28 28 58-72"/>
+  </g>
+  <g stroke="#d9e0e8" stroke-width="18" stroke-linecap="round">
+    <path d="M410 242h104"/>
+    <path d="M410 350h104"/>
+    <path d="M410 458h104"/>
+  </g>
+  <circle cx="654" cy="238" r="72" fill="#fff" opacity=".94"/>
+  <path d="m640 206 52 52M692 206l-52 52" stroke="#b460b5" stroke-width="18" stroke-linecap="round"/>
+  <rect x="628" y="372" width="120" height="58" rx="18" fill="#18b6d9" opacity=".9"/>
+  <path d="M656 402h64" stroke="#fff" stroke-width="14" stroke-linecap="round"/>
+</svg>

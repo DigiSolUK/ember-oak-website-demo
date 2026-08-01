@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">EV charger installation illustration</title>
+  <desc id="desc">An EV charge point connected to a car outline.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#1b165f"/>
+      <stop offset=".5" stop-color="#3547f2"/>
+      <stop offset="1" stop-color="#18b6d9"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="620" rx="48" fill="url(#g)"/>
+  <circle cx="706" cy="134" r="180" fill="#fff" opacity=".12"/>
+  <path d="M186 408c28-78 78-118 154-118h156c64 0 112 34 144 102l48 16c34 12 54 44 50 80H150c-8-38 6-66 36-80z" fill="#fff" opacity=".94"/>
+  <circle cx="278" cy="494" r="42" fill="#31238f"/>
+  <circle cx="612" cy="494" r="42" fill="#31238f"/>
+  <path d="M344 290h134l48 72H286z" fill="#edf0ff"/>
+  <rect x="660" y="140" width="92" height="226" rx="24" fill="#fff"/>
+  <rect x="684" y="184" width="44" height="58" rx="10" fill="#edf0ff"/>
+  <path d="M705 272v100c0 50-38 70-92 70" fill="none" stroke="#fff" stroke-width="18" stroke-linecap="round"/>
+  <path d="m706 185-28 55h28l-14 48 50-76h-34z" fill="#b460b5"/>
+</svg>
