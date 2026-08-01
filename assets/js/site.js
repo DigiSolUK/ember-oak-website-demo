@@ -1,4 +1,11 @@
 (() => {
+  const introLoader = document.querySelector(".intro-loader");
+  if (introLoader) {
+    window.setTimeout(() => {
+      introLoader.classList.add("is-complete");
+    }, 2600);
+  }
+
   const nav = document.querySelector(".site-nav");
   const toggle = document.querySelector(".menu-toggle");
 
