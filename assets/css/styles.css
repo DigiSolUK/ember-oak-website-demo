@@ -79,6 +79,13 @@ textarea {
   padding: 8px 0;
 }
 
+.top-contact {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0;
+  justify-content: flex-end;
+}
+
 .container {
   width: min(1240px, 94vw);
   margin: 0 auto;
@@ -2045,19 +2052,28 @@ textarea:focus-visible {
 
 @media (max-width: 620px) {
   .top-strip .container {
-    display: block;
-    padding: 6px 0;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
     text-align: center;
   }
 
-  .top-strip .container span:first-child {
+  .top-note,
+  .top-contact .desktop-only,
+  .top-contact .phone-alt,
+  .top-contact .email-link {
     display: none;
   }
 
-  .top-strip .container span:last-child {
-    display: block;
-    font-size: 0.72rem;
-    line-height: 1.35;
+  .top-contact {
+    justify-content: center;
+    font-size: 0.78rem;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  .top-contact .phone-primary::before {
+    content: "Call ";
   }
 
   h1 {
@@ -2071,15 +2087,15 @@ textarea:focus-visible {
 
   .brand-logo {
     min-width: 0;
+    gap: 8px;
   }
 
   .brand-logo img {
-    width: 42px;
+    width: 58px;
   }
 
   .brand-logo span {
-    max-width: 170px;
-    font-size: 0.68rem;
+    display: none;
   }
 
   .landing-hero {
@@ -2103,8 +2119,8 @@ textarea:focus-visible {
 
   .premium-header .nav-wrap {
     grid-template-columns: minmax(0, 1fr) auto auto;
-    gap: 8px;
-    padding: 8px 0;
+    gap: 7px;
+    padding: 6px 0;
     align-items: center;
   }
 
@@ -2116,18 +2132,19 @@ textarea:focus-visible {
   .premium-header .menu-toggle {
     grid-column: 2;
     grid-row: 1;
-    min-height: 40px;
+    min-height: 38px;
     border-radius: 999px;
-    padding: 8px 12px;
+    padding: 7px 11px;
+    font-size: 0.86rem;
   }
 
   .header-call {
     grid-column: 3;
     grid-row: 1;
     width: auto;
-    min-height: 40px;
-    padding: 8px 12px;
-    font-size: 0.84rem;
+    min-height: 38px;
+    padding: 7px 11px;
+    font-size: 0.86rem;
   }
 
   .premium-header .site-nav {
@@ -2152,8 +2169,23 @@ textarea:focus-visible {
   }
 
   .premium-hero-copy h1 {
-    font-size: clamp(2.35rem, 13vw, 2.75rem);
-    letter-spacing: -0.06em;
+    font-size: clamp(2.05rem, 10.5vw, 2.55rem);
+    line-height: 0.96;
+    letter-spacing: -0.052em;
+  }
+
+  .premium-hero-copy .lead {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .premium-hero-grid {
+    padding: 34px 0 38px;
+  }
+
+  .premium-hero .eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
   }
 
   .credential-row span,
@@ -2265,7 +2297,7 @@ textarea:focus-visible {
   }
 
   .premium-header .brand-logo img {
-    width: 46px;
+    width: 56px;
   }
 
   .premium-header .menu-toggle,
