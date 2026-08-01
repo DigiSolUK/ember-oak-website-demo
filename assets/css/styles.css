@@ -150,6 +150,10 @@ textarea {
   gap: 4px;
 }
 
+.mobile-login-link {
+  display: none;
+}
+
 .site-nav a {
   min-height: 44px;
   display: inline-flex;
@@ -2118,7 +2122,7 @@ textarea:focus-visible {
   }
 
   .premium-header .nav-wrap {
-    grid-template-columns: minmax(0, 1fr) auto auto;
+    grid-template-columns: minmax(0, 1fr) auto;
     gap: 7px;
     padding: 6px 0;
     align-items: center;
@@ -2139,12 +2143,7 @@ textarea:focus-visible {
   }
 
   .header-call {
-    grid-column: 3;
-    grid-row: 1;
-    width: auto;
-    min-height: 38px;
-    padding: 7px 11px;
-    font-size: 0.86rem;
+    display: none;
   }
 
   .premium-header .site-nav {
@@ -2166,6 +2165,13 @@ textarea:focus-visible {
     border-radius: 12px;
     background: #f7f8fc;
     min-height: 42px;
+  }
+
+  .premium-header .site-nav.open .mobile-login-link {
+    display: flex;
+    background: linear-gradient(135deg, var(--indigo), var(--magenta));
+    color: #fff;
+    font-weight: 900;
   }
 
   .premium-hero-copy h1 {
