@@ -3,114 +3,185 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Indigo Ops | CRM Dashboard</title>
-  <meta name="description" content="Indigo Electricals CRM demo for Sage invoice reconciliation and commission-short payment detection.">
+  <title>Indigo Electrical | Professional Electricians London & Essex</title>
+  <meta name="description" content="Professional Indigo Electrical landing page demo for domestic and commercial electrical services across London and Essex.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
+<body class="landing-page">
   <header class="site-header">
     <div class="top-strip">
       <div class="container">
-        <span>Indigo Electricals CRM Demo</span>
-        <span>Sage-connected reconciliation for commission-short payments</span>
+        <span>NICEIC registered electricians serving London, Essex and the M25 corridor</span>
+        <span>0800 086 2586 | 07766 307028 | enquiries@indigoelectrical.co.uk</span>
       </div>
     </div>
     <div class="container nav-wrap">
-      <a class="brand" href="index.html">INDIGO OPS<small>Electrical CRM + Sage</small></a>
+      <a class="brand brand-logo" href="index.html">
+        <img src="assets/images/indigo/logo.png" alt="Indigo Electrical logo" width="179" height="150">
+        <span>Domestic, commercial and compliance work</span>
+      </a>
       <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav class="site-nav" id="site-nav">
-        <a href="index.html">Dashboard</a>
-        <a href="about.html">Solution</a>
-        <a href="menu.html">Jobs</a>
+        <a href="index.html">Home</a>
+        <a href="#services">Services</a>
+        <a href="#trust">Why Indigo</a>
+        <a href="#quote">Free Quote</a>
+        <a href="about.html">CRM Solution</a>
+        <a href="menu.html">Jobs Demo</a>
         <a href="banquet.html">Invoices</a>
-        <a href="gallery.html">Sage Sync</a>
-        <a href="catering.html">Commission</a>
-        <a href="contact.html">Settings</a>
-        <a href="visiting-hours.html">Payment Monitor</a>
-        <a href="online-booking.html">New Job</a>
         <a href="menu-kit.html">Proposal</a>
       </nav>
-      <span class="sync-badge">Sage demo sync</span>
+      <span class="sync-badge">CRM-ready demo</span>
     </div>
   </header>
 
   <main>
-    <section class="container page-head">
+    <section class="landing-hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Local. Qualified. Reliable.</p>
+          <h1>Electrical work handled properly, from urgent repairs to full compliance testing.</h1>
+          <p class="lead">A professional landing page concept for Indigo Electrical: clear trust signals, fast quote capture, and a back-office CRM that stops invoices falling through the cracks.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#quote">Request A Free Quote</a>
+            <a class="btn btn-secondary" href="tel:08000862586">Call 0800 086 2586</a>
+          </div>
+          <div class="trust-row" aria-label="Trust markers">
+            <span>NICEIC registered</span>
+            <span>Fully insured</span>
+            <span>25+ years experience</span>
+          </div>
+        </div>
+        <aside class="hero-card-pro">
+          <img class="hero-brand-mark" src="assets/images/indigo/logo.png" alt="Indigo Electrical" width="179" height="150">
+          <div class="live-card-header">
+            <span class="pulse-dot"></span>
+            <strong>Today&apos;s response board</strong>
+          </div>
+          <div class="service-ticket">
+            <span>Emergency lighting fault</span>
+            <strong>Engineer dispatched</strong>
+          </div>
+          <div class="service-ticket">
+            <span>EICR certificate</span>
+            <strong>Report due 16:30</strong>
+          </div>
+          <div class="service-ticket">
+            <span>Fuseboard upgrade</span>
+            <strong>Quote approved</strong>
+          </div>
+          <div class="hero-stat">
+            <strong>97%</strong>
+            <span>demo payment-match confidence once CRM and Sage are connected</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="container logo-strip" id="trust">
+      <span>NICEIC</span>
+      <span>Which? Trusted Trader style proof</span>
+      <span>Checkatrade / MyBuilder ready</span>
+      <span>BS 7671 compliance led</span>
+    </section>
+
+    <section class="container split-feature">
       <div>
-        <p class="eyebrow">Back-office workbench</p>
-        <h1>Invoices paid short because commission has been deducted.</h1>
-        <p class="lead">This demo shows how Indigo can detect net receipts, calculate client commission, and prepare the Sage posting needed to settle invoices cleanly.</p>
+        <p class="eyebrow">Built for homeowners, landlords and businesses</p>
+        <h2>One serious electrical brand for everyday repairs and high-trust compliance work.</h2>
       </div>
-      <div class="toolbar">
-        <a class="btn btn-primary" href="visiting-hours.html">Review Payments</a>
-        <a class="btn btn-secondary" href="about.html">View Solution</a>
-      </div>
+      <p class="lead">The current Indigo proposition is strong but the landing page needs sharper hierarchy: show credentials immediately, make services easy to scan, capture enquiries quickly, and make commercial clients confident that operations are under control.</p>
     </section>
 
-    <section class="container grid-4">
-      <article class="metric good"><div class="metric-value">£48,260</div><div class="metric-label">Paid this month</div></article>
-      <article class="metric warn"><div class="metric-value">£3,840</div><div class="metric-label">Commission deductions detected</div></article>
-      <article class="metric bad"><div class="metric-value">12</div><div class="metric-label">Invoices waiting for adjustment</div></article>
-      <article class="metric"><div class="metric-value">97%</div><div class="metric-label">Auto-match confidence</div></article>
+    <section class="container service-showcase" id="services">
+      <article class="service-card featured">
+        <img src="assets/images/indigo/electrical-services.jpg" alt="Electrician completing professional electrical service work" width="960" height="640" loading="lazy">
+        <span class="card-index">01</span>
+        <h3>Electrical Services</h3>
+        <p>Installations, repairs, fault finding, sockets, lighting, rewiring, outdoor power and general domestic or commercial electrical work.</p>
+      </article>
+      <article class="service-card">
+        <img src="assets/images/indigo/electrical-heating.jpg" alt="Electrical heating and installation equipment" width="960" height="640" loading="lazy">
+        <span class="card-index">02</span>
+        <h3>Emergency Call-Outs</h3>
+        <p>Fast response for urgent faults, unsafe circuits, failed sockets, lighting issues and power problems.</p>
+      </article>
+      <article class="service-card">
+        <img src="assets/images/indigo/inspection-testing.jpg" alt="Electrical inspection and testing equipment" width="960" height="640" loading="lazy">
+        <span class="card-index">03</span>
+        <h3>Inspection & Testing</h3>
+        <p>EICR reports, landlord safety checks, remedial work and certification workflows for compliance records.</p>
+      </article>
+      <article class="service-card">
+        <span class="card-index">04</span>
+        <h3>Fuseboards</h3>
+        <p>Consumer unit upgrades, RCD protection, circuit labelling and safer modern installations.</p>
+      </article>
+      <article class="service-card">
+        <span class="card-index">05</span>
+        <h3>EV Charging</h3>
+        <p>Home and workplace EV charger installation with practical advice on position, load and future use.</p>
+      </article>
+      <article class="service-card">
+        <span class="card-index">06</span>
+        <h3>Maintenance</h3>
+        <p>Planned electrical maintenance for landlords, property managers, facilities teams and repeat customers.</p>
+      </article>
     </section>
 
-    <section class="container layout" style="margin-top:16px;">
-      <div class="panel">
-        <h2>Reconciliation Queue</h2>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr><th>Invoice</th><th>Client</th><th>Gross</th><th>Paid Net</th><th>Commission</th><th>Sage Action</th><th>Status</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>INV-1048</td><td>Letting Partner A</td><td>£1,200</td><td>£1,080</td><td>£120</td><td>Create commission adjustment and allocate receipt</td><td><span class="status warn">Review</span></td></tr>
-              <tr><td>INV-1047</td><td>Property Group North</td><td>£860</td><td>£774</td><td>£86</td><td>Ready to post</td><td><span class="status ok">Matched</span></td></tr>
-              <tr><td>INV-1046</td><td>Insurance Network</td><td>£2,400</td><td>£2,100</td><td>£300</td><td>Rate variance exceeds tolerance</td><td><span class="status bad">Exception</span></td></tr>
-              <tr><td>INV-1045</td><td>Facilities Contractor</td><td>£690</td><td>£621</td><td>£69</td><td>Ready to post</td><td><span class="status ok">Matched</span></td></tr>
-            </tbody>
-          </table>
+    <section class="ops-band">
+      <div class="container ops-grid">
+        <div>
+          <p class="eyebrow">Commercial operations upgrade</p>
+          <h2>The professional website sells the work. The CRM protects the money.</h2>
+          <p class="lead">For Indigo&apos;s internal workflow, the same build can include a CRM backend that tracks jobs, invoices, bank receipts and commission deductions before posting cleanly into Sage.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="about.html">View CRM Solution</a>
+            <a class="btn btn-secondary" href="banquet.html">See Invoice Demo</a>
+          </div>
+        </div>
+        <div class="mini-dashboard">
+          <div class="mini-row"><span>Gross invoice</span><strong>£1,200</strong></div>
+          <div class="mini-row"><span>Client paid net</span><strong>£1,080</strong></div>
+          <div class="mini-row"><span>Commission deducted</span><strong>£120</strong></div>
+          <div class="mini-row good"><span>Sage outcome</span><strong>Ready to settle</strong></div>
         </div>
       </div>
-
-      <aside class="panel">
-        <h2>Commission Resolver</h2>
-        <form class="reconcile-box">
-          <label for="invoice-total">Gross invoice value</label>
-          <input id="invoice-total" type="number" value="1200" min="0" step="1">
-          <label for="net-paid">Bank receipt received</label>
-          <input id="net-paid" type="number" value="1080" min="0" step="1">
-          <label for="commission-rate">Commission rate (%)</label>
-          <input id="commission-rate" type="number" value="10" min="0" step="0.1">
-        </form>
-        <div class="calc-row"><span>Expected net receipt</span><strong id="calc-net">£1,080</strong></div>
-        <div class="calc-row"><span>Commission adjustment</span><strong id="calc-commission">£120</strong></div>
-        <div class="calc-row"><span>Unallocated difference</span><strong id="calc-unallocated">£0</strong></div>
-        <div class="calc-row total"><span>Sage result</span><strong id="calc-sage">Invoice can be settled</strong></div>
-      </aside>
     </section>
 
-    <section class="container grid-3" style="margin-top:16px;">
-      <article class="callout">
-        <h3>CRM Layer</h3>
-        <p>Stores jobs, customers, engineers, invoice references, commission rules, and payment status in one operational dashboard.</p>
-      </article>
-      <article class="callout">
-        <h3>Sage Posting Layer</h3>
-        <p>Pushes receipts and commission adjustments so the gross invoice, cash received, and commission cost are all visible.</p>
-      </article>
-      <article class="callout warning">
-        <h3>Accounting Control</h3>
-        <p>Final posting method should be confirmed with the accountant: commission expense, credit note, or agreed clearing account.</p>
-      </article>
+    <section class="container proof-grid">
+      <article class="proof-card"><strong>25+</strong><span>years electrical experience</span></article>
+      <article class="proof-card"><strong>200+</strong><span>review-ready proof points from trade platforms</span></article>
+      <article class="proof-card"><strong>M25</strong><span>coverage across London and surrounding areas</span></article>
+      <article class="proof-card"><strong>09:00</strong><span>priority call-back workflow for new enquiries</span></article>
+    </section>
+
+    <section class="container quote-section" id="quote">
+      <div>
+        <p class="eyebrow">Free quotation</p>
+        <h2>Make the next step obvious.</h2>
+        <p class="lead">This form is demo-only, but the production version can route enquiries into email, CRM pipeline, WhatsApp alerts, or a booking calendar.</p>
+      </div>
+      <form class="panel" data-demo-form>
+        <div class="form-grid">
+          <div><label for="quote-name">Name</label><input id="quote-name" required></div>
+          <div><label for="quote-phone">Phone</label><input id="quote-phone" required></div>
+          <div><label for="quote-email">Email</label><input id="quote-email" type="email"></div>
+          <div><label for="quote-service">Service needed</label><select id="quote-service"><option>Electrical repair</option><option>Emergency call-out</option><option>EICR / testing</option><option>Fuseboard upgrade</option><option>EV charging</option><option>Maintenance contract</option></select></div>
+          <div class="full"><label for="quote-message">Job details</label><textarea id="quote-message" placeholder="Tell us the issue, property type, area and preferred timing."></textarea></div>
+        </div>
+        <p class="form-feedback" aria-live="polite"></p>
+        <button class="btn btn-primary" type="submit">Send Quote Request</button>
+      </form>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-grid">
-      <span>Indigo Ops CRM prototype</span>
-      <span>Static demo only. Production build requires Sage OAuth, bank feed rules, user accounts, and accountant-approved posting logic.</span>
+      <span>Indigo Electrical landing page + CRM prototype</span>
+      <span>Professional website concept with operational Sage reconciliation demo.</span>
       <span>&copy; <span data-year></span> Digitalised Solutions</span>
     </div>
   </footer>
