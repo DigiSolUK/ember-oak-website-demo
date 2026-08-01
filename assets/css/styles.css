@@ -34,6 +34,10 @@ body {
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   min-height: 100vh;
   background:
@@ -43,11 +47,16 @@ body {
   color: var(--ink);
   font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
   line-height: 1.45;
+  overflow-x: hidden;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
 }
 
 button,
@@ -135,6 +144,9 @@ textarea {
 }
 
 .site-nav a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
   border-radius: 6px;
   padding: 7px 10px;
   color: #475467;
@@ -240,6 +252,7 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  min-height: 44px;
   border: 1px solid transparent;
   border-radius: 999px;
   padding: 10px 16px;
@@ -247,6 +260,7 @@ h3 {
   color: var(--ink);
   font-weight: 600;
   cursor: pointer;
+  touch-action: manipulation;
 }
 
 .btn-primary {
@@ -445,11 +459,13 @@ input,
 select,
 textarea {
   width: 100%;
+  min-height: 44px;
   border: 1px solid var(--line-strong);
   border-radius: 6px;
   background: #fff;
   padding: 8px 10px;
   color: var(--ink);
+  font-size: 16px;
 }
 
 textarea {
@@ -1928,6 +1944,10 @@ textarea:focus-visible {
     grid-template-columns: 1fr auto;
   }
 
+  .brand-logo span {
+    max-width: 240px;
+  }
+
   .premium-header .site-nav {
     grid-column: 1 / -1;
   }
@@ -1972,6 +1992,10 @@ textarea:focus-visible {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .crm-table {
+    min-width: 860px;
+  }
+
   .command-actions {
     justify-content: flex-start;
   }
@@ -2004,6 +2028,11 @@ textarea:focus-visible {
     width: 42px;
   }
 
+  .brand-logo span {
+    max-width: 170px;
+    font-size: 0.68rem;
+  }
+
   .landing-hero {
     background:
       linear-gradient(180deg, rgba(9, 13, 44, 0.94), rgba(49, 35, 143, 0.74)),
@@ -2033,7 +2062,7 @@ textarea:focus-visible {
   }
 
   .premium-hero-copy h1 {
-    font-size: 2.75rem;
+    font-size: clamp(2.35rem, 13vw, 2.75rem);
     letter-spacing: -0.06em;
   }
 
@@ -2100,7 +2129,7 @@ textarea:focus-visible {
   }
 
   .crm-command h1 {
-    font-size: 2.25rem;
+    font-size: clamp(2rem, 12vw, 2.25rem);
     letter-spacing: -0.055em;
   }
 
@@ -2108,10 +2137,12 @@ textarea:focus-visible {
   .crm-panel,
   .crm-rail {
     border-radius: 22px;
+    padding: 16px;
   }
 
   .command-actions .btn,
-  .panel-heading .btn {
+  .panel-heading .btn,
+  .crm-table .btn {
     width: 100%;
   }
 
@@ -2126,5 +2157,14 @@ textarea:focus-visible {
 
   .contact-actions .btn {
     width: 100%;
+  }
+
+  .table-wrap {
+    margin-inline: -6px;
+    padding-inline: 6px;
+  }
+
+  .crm-table {
+    min-width: 780px;
   }
 }
