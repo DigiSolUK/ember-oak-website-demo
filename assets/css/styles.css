@@ -1447,13 +1447,37 @@ textarea:focus-visible {
   margin: 22px 0;
 }
 
-.review-platforms span {
+.review-platforms > span,
+.review-platforms a {
+  min-height: 44px;
   border-radius: 999px;
   background: var(--blue-soft);
   color: var(--indigo);
   padding: 8px 11px;
   font-size: 0.82rem;
   font-weight: 900;
+}
+
+.review-platforms a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(49, 35, 143, 0.12);
+  text-decoration: none;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.review-platforms a span {
+  color: #536076;
+  font-size: 0.76rem;
+  font-weight: 850;
+}
+
+.review-platforms a:hover,
+.review-platforms a:focus-visible {
+  border-color: rgba(49, 35, 143, 0.3);
+  background: #fff;
+  transform: translateY(-1px);
 }
 
 .testimonial-grid,
@@ -1601,6 +1625,120 @@ textarea:focus-visible {
 
 .testimonials-summary-card p {
   color: var(--muted);
+}
+
+.review-sources {
+  display: grid;
+  grid-template-columns: minmax(0, 0.58fr) minmax(0, 1.42fr);
+  gap: clamp(22px, 4vw, 44px);
+  align-items: start;
+  margin: 70px auto 0;
+}
+
+.review-sources-intro {
+  position: sticky;
+  top: 132px;
+}
+
+.review-sources-intro h2 {
+  color: var(--indigo);
+  font-size: clamp(1.75rem, 3vw, 2.55rem);
+  line-height: 1.02;
+  letter-spacing: -0.055em;
+}
+
+.review-sources-intro p:not(.eyebrow) {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.review-source-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.review-source-card {
+  position: relative;
+  min-height: 190px;
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  border: 1px solid rgba(49, 35, 143, 0.12);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(24, 182, 217, 0.12), transparent 48%),
+    #fff;
+  box-shadow: 0 18px 44px rgba(16, 24, 40, 0.07);
+  color: var(--indigo);
+  padding: 22px;
+  text-decoration: none;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.review-source-card.featured {
+  grid-column: span 4;
+  background:
+    radial-gradient(circle at 92% 6%, rgba(24, 182, 217, 0.28), transparent 34rem),
+    linear-gradient(135deg, rgba(49, 35, 143, 0.98), rgba(108, 57, 158, 0.94));
+  color: #fff;
+}
+
+.review-source-card span {
+  color: inherit;
+  font-size: 0.8rem;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.review-source-card strong {
+  display: block;
+  margin: 22px 0 10px;
+  font-size: clamp(2.45rem, 5vw, 4.8rem);
+  line-height: 0.86;
+  letter-spacing: -0.08em;
+}
+
+.review-source-card small {
+  display: block;
+  max-width: 24rem;
+  color: #536076;
+  font-size: 0.92rem;
+  font-weight: 850;
+  line-height: 1.35;
+}
+
+.review-source-card.featured small {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.review-source-card em {
+  display: inline-flex;
+  width: fit-content;
+  min-height: 44px;
+  align-items: center;
+  margin-top: 18px;
+  border-radius: 999px;
+  background: rgba(49, 35, 143, 0.08);
+  color: inherit;
+  padding: 10px 13px;
+  font-size: 0.82rem;
+  font-style: normal;
+  font-weight: 950;
+}
+
+.review-source-card.featured em {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.review-source-card:hover,
+.review-source-card:focus-visible {
+  border-color: rgba(49, 35, 143, 0.32);
+  box-shadow: 0 24px 58px rgba(16, 24, 40, 0.11);
+  transform: translateY(-2px);
 }
 
 .testimonial-page-band {
@@ -3078,10 +3216,24 @@ textarea:focus-visible {
   .testimonial-band,
   .testimonial-page-band,
   .testimonials-hero-grid,
+  .review-sources,
   .operations-grid,
   .areas-quote-grid,
   .testimonial-cta {
     grid-template-columns: 1fr;
+  }
+
+  .review-sources-intro {
+    position: static;
+  }
+
+  .review-source-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .review-source-card,
+  .review-source-card.featured {
+    grid-column: auto;
   }
 
   .landing-hero {
@@ -3408,9 +3560,32 @@ textarea:focus-visible {
 
   .testimonial-card,
   .review-card,
-  .testimonials-summary-card {
+  .testimonials-summary-card,
+  .review-source-card {
     border-radius: 22px;
     padding: 18px;
+  }
+
+  .review-platforms {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .review-platforms a {
+    justify-content: space-between;
+  }
+
+  .review-sources {
+    margin-top: 42px;
+  }
+
+  .review-source-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .review-source-card {
+    min-height: 165px;
   }
 
   .testimonial-card.featured {

@@ -6,6 +6,23 @@
     }, 2600);
   }
 
+  const scrollToHashTarget = () => {
+    if (!location.hash) {
+      return;
+    }
+
+    try {
+      const target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      target?.scrollIntoView({ block: "start" });
+    } catch {
+      // Ignore malformed hash fragments from external links.
+    }
+  };
+
+  if (location.hash) {
+    window.setTimeout(scrollToHashTarget, introLoader ? 2800 : 120);
+  }
+
   const nav = document.querySelector(".site-nav");
   const toggle = document.querySelector(".menu-toggle");
 
