@@ -1893,6 +1893,59 @@ textarea:focus-visible {
   background: linear-gradient(90deg, var(--indigo), var(--magenta));
 }
 
+.logo-concepts-page {
+  background:
+    radial-gradient(circle at 0% 0%, rgba(180, 96, 181, 0.14), transparent 30rem),
+    radial-gradient(circle at 100% 8%, rgba(24, 182, 217, 0.12), transparent 28rem),
+    #f7f8fc;
+}
+
+.logo-concepts {
+  padding: clamp(28px, 5vw, 64px) 0;
+}
+
+.logo-concepts-head {
+  max-width: 860px;
+  margin-bottom: 28px;
+}
+
+.logo-concepts-head h1 {
+  font-size: clamp(2.4rem, 5vw, 5rem);
+  line-height: 0.95;
+  letter-spacing: -0.07em;
+}
+
+.logo-option-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.logo-option-grid article {
+  border: 1px solid rgba(49, 35, 143, 0.12);
+  border-radius: 28px;
+  background: #fff;
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+
+.logo-option-grid h2 {
+  color: var(--indigo);
+}
+
+.logo-option-grid img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #fff;
+}
+
+.logo-option-grid p {
+  margin: 12px 0 0;
+  color: var(--muted);
+}
+
 .footer-grid {
   display: flex;
   justify-content: space-between;
